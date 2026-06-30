@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mizancore-baas"
+version = "0.1.0"
+description = "Official Python SDK for the MizanCore Banking-as-a-Service (BaaS) API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "MizanCore" }]
+keywords = ["mizancore", "baas", "banking", "fintech", "api", "sdk"]
+dependencies = [
+    "urllib3>=1.26,<3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mizancore_baas = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
