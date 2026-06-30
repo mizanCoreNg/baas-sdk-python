@@ -5,9 +5,11 @@ All URIs are relative to *https://api.mizancore.ng*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**developer_accounts_index**](DeveloperPortalManagedAccountsApi.md#developer_accounts_index) | **GET** /api/v1/developer/accounts | List all managed accounts
+[**developer_accounts_show**](DeveloperPortalManagedAccountsApi.md#developer_accounts_show) | **GET** /api/v1/developer/accounts/{accountId} | Get a managed account
 [**developer_customers_accounts_index**](DeveloperPortalManagedAccountsApi.md#developer_customers_accounts_index) | **GET** /api/v1/developer/customers/{customerId}/accounts | List a customer&#39;s managed accounts
 [**developer_customers_accounts_store**](DeveloperPortalManagedAccountsApi.md#developer_customers_accounts_store) | **POST** /api/v1/developer/customers/{customerId}/accounts | Open a managed account
 [**managed_account_index**](DeveloperPortalManagedAccountsApi.md#managed_account_index) | **GET** /api/v1/baas/customers/{customerId}/accounts | List a customer&#39;s managed accounts
+[**managed_account_show**](DeveloperPortalManagedAccountsApi.md#managed_account_show) | **GET** /api/v1/baas/accounts/{accountId} | Get a managed account
 [**managed_account_store**](DeveloperPortalManagedAccountsApi.md#managed_account_store) | **POST** /api/v1/baas/customers/{customerId}/accounts | Open a managed account
 
 
@@ -104,6 +106,106 @@ Name | Type | Description  | Notes
 **401** | Unauthenticated |  -  |
 **403** | Unauthorized (insufficient permissions). |  -  |
 **400** | Bad Request — tenant routing information missing or invalid (e.g. neither Host header nor X-Tenant-ID resolved to a tenant), or X-Tenant-ID supplied in production where it is disallowed. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **developer_accounts_show**
+> ManagedAccountIndex200Response developer_accounts_show(account_id, x_tenant_id)
+
+Get a managed account
+
+Returns a single managed account (id, NUBAN, status, currency, current balance in kobo, nickname, product/customer ids) for the authenticated managed partner. BOLA: a non-existent / cross-partner / non-managed account resolves to 404, never an existence oracle. Requires a granted ACCOUNT_DETAILS consent for the account's customer. Managed partners only (a licensed partner gets 422).
+
+### Example
+
+* Api Key Authentication (tenantHeader):
+* Api Key Authentication (hmacAuth):
+* Api Key Authentication (apiKeyAuth):
+
+```python
+import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
+from mizancore_baas_generated.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.mizancore.ng
+# See configuration.py for a list of all supported configuration parameters.
+configuration = mizancore_baas_generated.Configuration(
+    host = "https://api.mizancore.ng"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: tenantHeader
+configuration.api_key['tenantHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['tenantHeader'] = 'Bearer'
+
+# Configure API key authorization: hmacAuth
+configuration.api_key['hmacAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['hmacAuth'] = 'Bearer'
+
+# Configure API key authorization: apiKeyAuth
+configuration.api_key['apiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with mizancore_baas_generated.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = mizancore_baas_generated.DeveloperPortalManagedAccountsApi(api_client)
+    account_id = '00000000-0000-0000-0000-000000000001' # str | 
+    x_tenant_id = 'world.test.localhost' # str | Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts.
+
+    try:
+        # Get a managed account
+        api_response = api_instance.developer_accounts_show(account_id, x_tenant_id)
+        print("The response of DeveloperPortalManagedAccountsApi->developer_accounts_show:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DeveloperPortalManagedAccountsApi->developer_accounts_show: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**|  | 
+ **x_tenant_id** | **str**| Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. | 
+
+### Return type
+
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
+
+### Authorization
+
+[tenantHeader](../README.md#tenantHeader), [hmacAuth](../README.md#hmacAuth), [apiKeyAuth](../README.md#apiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation. |  -  |
+**401** | Unauthenticated |  -  |
+**403** | No granted ACCOUNT_DETAILS consent for this account&#39;s customer (BAAS_CONSENT_REQUIRED) |  -  |
+**404** | Account not found among the partner&#39;s managed accounts (BOLA) |  -  |
+**400** | Bad Request — tenant routing information missing or invalid (e.g. neither Host header nor X-Tenant-ID resolved to a tenant), or X-Tenant-ID supplied in production where it is disallowed. |  -  |
+**422** | Partner not managed (operates under the licensed model) |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -406,6 +508,106 @@ Name | Type | Description  | Notes
 **403** | Consent required — no valid consent for this customer |  -  |
 **404** | Customer not linked to this partner |  -  |
 **400** | Bad Request — tenant routing information missing or invalid (e.g. neither Host header nor X-Tenant-ID resolved to a tenant), or X-Tenant-ID supplied in production where it is disallowed. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **managed_account_show**
+> ManagedAccountIndex200Response managed_account_show(account_id, x_tenant_id)
+
+Get a managed account
+
+Returns a single managed account (id, NUBAN, status, currency, current balance in kobo, nickname, product/customer ids) for the authenticated managed partner. BOLA: a non-existent / cross-partner / non-managed account resolves to 404, never an existence oracle. Requires a granted ACCOUNT_DETAILS consent for the account's customer. Managed partners only (a licensed partner gets 422).
+
+### Example
+
+* Api Key Authentication (tenantHeader):
+* Api Key Authentication (hmacAuth):
+* Api Key Authentication (apiKeyAuth):
+
+```python
+import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
+from mizancore_baas_generated.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.mizancore.ng
+# See configuration.py for a list of all supported configuration parameters.
+configuration = mizancore_baas_generated.Configuration(
+    host = "https://api.mizancore.ng"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: tenantHeader
+configuration.api_key['tenantHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['tenantHeader'] = 'Bearer'
+
+# Configure API key authorization: hmacAuth
+configuration.api_key['hmacAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['hmacAuth'] = 'Bearer'
+
+# Configure API key authorization: apiKeyAuth
+configuration.api_key['apiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with mizancore_baas_generated.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = mizancore_baas_generated.DeveloperPortalManagedAccountsApi(api_client)
+    account_id = '00000000-0000-0000-0000-000000000001' # str | 
+    x_tenant_id = 'world.test.localhost' # str | Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts.
+
+    try:
+        # Get a managed account
+        api_response = api_instance.managed_account_show(account_id, x_tenant_id)
+        print("The response of DeveloperPortalManagedAccountsApi->managed_account_show:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DeveloperPortalManagedAccountsApi->managed_account_show: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**|  | 
+ **x_tenant_id** | **str**| Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. | 
+
+### Return type
+
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
+
+### Authorization
+
+[tenantHeader](../README.md#tenantHeader), [hmacAuth](../README.md#hmacAuth), [apiKeyAuth](../README.md#apiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation. |  -  |
+**401** | Unauthenticated |  -  |
+**403** | No granted ACCOUNT_DETAILS consent for this account&#39;s customer (BAAS_CONSENT_REQUIRED) |  -  |
+**404** | Account not found among the partner&#39;s managed accounts (BOLA) |  -  |
+**400** | Bad Request — tenant routing information missing or invalid (e.g. neither Host header nor X-Tenant-ID resolved to a tenant), or X-Tenant-ID supplied in production where it is disallowed. |  -  |
+**422** | Partner not managed (operates under the licensed model) |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

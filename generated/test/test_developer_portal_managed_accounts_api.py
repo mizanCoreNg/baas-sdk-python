@@ -33,6 +33,13 @@ class TestDeveloperPortalManagedAccountsApi(unittest.TestCase):
         """
         pass
 
+    def test_developer_accounts_show(self) -> None:
+        """Test case for developer_accounts_show
+
+        Get a managed account
+        """
+        pass
+
     def test_developer_customers_accounts_index(self) -> None:
         """Test case for developer_customers_accounts_index
 
@@ -51,6 +58,13 @@ class TestDeveloperPortalManagedAccountsApi(unittest.TestCase):
         """Test case for managed_account_index
 
         List a customer's managed accounts
+        """
+        pass
+
+    def test_managed_account_show(self) -> None:
+        """Test case for managed_account_show
+
+        Get a managed account
         """
         pass
 
