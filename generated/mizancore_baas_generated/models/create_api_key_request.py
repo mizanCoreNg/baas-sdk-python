@@ -39,8 +39,8 @@ class CreateApiKeyRequest(BaseModel):
     def scopes_validate_enum(cls, value):
         """Validates the enum"""
         for i in value:
-            if i not in set(['virtual_accounts:read', 'virtual_accounts:write', 'transfers:read', 'transfers:write', 'bills:read', 'bills:write', 'webhooks:manage', 'customers:read', 'customers:write', 'accounts:read', 'accounts:write', 'cards:read', 'cards:write', 'consent:read', 'consent:write']):
-                raise ValueError("each list item must be one of ('virtual_accounts:read', 'virtual_accounts:write', 'transfers:read', 'transfers:write', 'bills:read', 'bills:write', 'webhooks:manage', 'customers:read', 'customers:write', 'accounts:read', 'accounts:write', 'cards:read', 'cards:write', 'consent:read', 'consent:write')")
+            if i not in set(['virtual_accounts:read', 'virtual_accounts:write', 'transfers:read', 'transfers:write', 'bills:read', 'bills:write', 'webhooks:manage', 'customers:read', 'customers:write', 'accounts:read', 'accounts:write', 'cards:read', 'cards:write', 'consent:read', 'consent:write', 'fees:read']):
+                raise ValueError("each list item must be one of ('virtual_accounts:read', 'virtual_accounts:write', 'transfers:read', 'transfers:write', 'bills:read', 'bills:write', 'webhooks:manage', 'customers:read', 'customers:write', 'accounts:read', 'accounts:write', 'cards:read', 'cards:write', 'consent:read', 'consent:write', 'fees:read')")
         return value
 
     @field_validator('environment')

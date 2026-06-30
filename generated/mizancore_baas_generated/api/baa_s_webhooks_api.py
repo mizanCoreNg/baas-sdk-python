@@ -20,7 +20,9 @@ from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.store_webhook_subscription_request import StoreWebhookSubscriptionRequest
 from mizancore_baas_generated.models.update_webhook_subscription_request import UpdateWebhookSubscriptionRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_operations_deliveries200_response import WebhookSubscriptionOperationsDeliveries200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -57,7 +59,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionOperationsDeliveries200Response:
         """List webhook deliveries
 
         Returns a paginated delivery log for a specific webhook subscription, including response status codes and timing. Useful for debugging failed deliveries.
@@ -98,7 +100,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionOperationsDeliveries200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -132,7 +134,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionOperationsDeliveries200Response]:
         """List webhook deliveries
 
         Returns a paginated delivery log for a specific webhook subscription, including response status codes and timing. Useful for debugging failed deliveries.
@@ -173,7 +175,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionOperationsDeliveries200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -248,7 +250,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionOperationsDeliveries200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -347,7 +349,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Deactivate a webhook subscription
 
         Soft-deactivates a webhook subscription. The subscription record is retained but no further events will be delivered to it.
@@ -388,8 +390,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -423,7 +425,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Deactivate a webhook subscription
 
         Soft-deactivates a webhook subscription. The subscription record is retained but no further events will be delivered to it.
@@ -464,8 +466,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -540,8 +542,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -639,7 +641,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """List webhook subscriptions
 
         Returns a paginated list of all webhook subscriptions for the authenticated partner, ordered by most recently created.
@@ -677,7 +679,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -709,7 +711,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """List webhook subscriptions
 
         Returns a paginated list of all webhook subscriptions for the authenticated partner, ordered by most recently created.
@@ -747,7 +749,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -817,7 +819,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -912,7 +914,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Rotate webhook secret
 
         Generates a new signing secret for the webhook subscription. The new secret is returned only once and must be stored securely by the partner.
@@ -953,8 +955,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -989,7 +991,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Rotate webhook secret
 
         Generates a new signing secret for the webhook subscription. The new secret is returned only once and must be stored securely by the partner.
@@ -1030,8 +1032,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -1107,8 +1109,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -1208,7 +1210,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """Get webhook subscription details
 
         Retrieves the full details of a specific webhook subscription by its ID, including the subscribed event types and active status.
@@ -1249,7 +1251,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1283,7 +1285,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """Get webhook subscription details
 
         Retrieves the full details of a specific webhook subscription by its ID, including the subscribed event types and active status.
@@ -1324,7 +1326,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1399,7 +1401,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1498,7 +1500,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """Create a webhook subscription
 
         Registers a new webhook endpoint URL to receive event notifications. Specify the event types to subscribe to.
@@ -1539,8 +1541,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1574,7 +1576,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """Create a webhook subscription
 
         Registers a new webhook endpoint URL to receive event notifications. Specify the event types to subscribe to.
@@ -1615,8 +1617,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1691,8 +1693,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1804,7 +1806,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Send a test webhook
 
         Sends a test webhook payload to the subscription URL and returns the delivery result synchronously. Useful for verifying endpoint connectivity and signature validation.
@@ -1845,8 +1847,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1881,7 +1883,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Send a test webhook
 
         Sends a test webhook payload to the subscription URL and returns the delivery result synchronously. Useful for verifying endpoint connectivity and signature validation.
@@ -1922,8 +1924,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1999,8 +2001,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2101,7 +2103,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """Update a webhook subscription
 
         Updates the URL or subscribed event types of an existing webhook subscription.
@@ -2145,7 +2147,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2181,7 +2183,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """Update a webhook subscription
 
         Updates the URL or subscribed event types of an existing webhook subscription.
@@ -2225,7 +2227,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2305,7 +2307,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2421,7 +2423,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Deactivate a webhook subscription
 
         Soft-deactivates a webhook subscription. The subscription record is retained but no further events will be delivered to it.
@@ -2462,8 +2464,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2497,7 +2499,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Deactivate a webhook subscription
 
         Soft-deactivates a webhook subscription. The subscription record is retained but no further events will be delivered to it.
@@ -2538,8 +2540,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2614,8 +2616,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2713,7 +2715,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """List webhook subscriptions
 
         Returns a paginated list of all webhook subscriptions for the authenticated partner, ordered by most recently created.
@@ -2751,7 +2753,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2783,7 +2785,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """List webhook subscriptions
 
         Returns a paginated list of all webhook subscriptions for the authenticated partner, ordered by most recently created.
@@ -2821,7 +2823,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2891,7 +2893,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2986,7 +2988,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionOperationsDeliveries200Response:
         """List webhook deliveries
 
         Returns a paginated delivery log for a specific webhook subscription, including response status codes and timing. Useful for debugging failed deliveries.
@@ -3027,7 +3029,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionOperationsDeliveries200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3061,7 +3063,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionOperationsDeliveries200Response]:
         """List webhook deliveries
 
         Returns a paginated delivery log for a specific webhook subscription, including response status codes and timing. Useful for debugging failed deliveries.
@@ -3102,7 +3104,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionOperationsDeliveries200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3177,7 +3179,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionOperationsDeliveries200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3276,7 +3278,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Rotate webhook secret
 
         Generates a new signing secret for the webhook subscription. The new secret is returned only once and must be stored securely by the partner.
@@ -3317,8 +3319,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3353,7 +3355,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Rotate webhook secret
 
         Generates a new signing secret for the webhook subscription. The new secret is returned only once and must be stored securely by the partner.
@@ -3394,8 +3396,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3471,8 +3473,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3572,7 +3574,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Send a test webhook
 
         Sends a test webhook payload to the subscription URL and returns the delivery result synchronously. Useful for verifying endpoint connectivity and signature validation.
@@ -3613,8 +3615,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3649,7 +3651,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Send a test webhook
 
         Sends a test webhook payload to the subscription URL and returns the delivery result synchronously. Useful for verifying endpoint connectivity and signature validation.
@@ -3690,8 +3692,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3767,8 +3769,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3868,7 +3870,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """Get webhook subscription details
 
         Retrieves the full details of a specific webhook subscription by its ID, including the subscribed event types and active status.
@@ -3909,7 +3911,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3943,7 +3945,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """Get webhook subscription details
 
         Retrieves the full details of a specific webhook subscription by its ID, including the subscribed event types and active status.
@@ -3984,7 +3986,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -4059,7 +4061,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -4158,7 +4160,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """Create a webhook subscription
 
         Registers a new webhook endpoint URL to receive event notifications. Specify the event types to subscribe to.
@@ -4199,8 +4201,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4234,7 +4236,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """Create a webhook subscription
 
         Registers a new webhook endpoint URL to receive event notifications. Specify the event types to subscribe to.
@@ -4275,8 +4277,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4351,8 +4353,8 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4465,7 +4467,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionIndex200Response:
         """Update a webhook subscription
 
         Updates the URL or subscribed event types of an existing webhook subscription.
@@ -4509,7 +4511,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4545,7 +4547,7 @@ class BaaSWebhooksApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionIndex200Response]:
         """Update a webhook subscription
 
         Updates the URL or subscribed event types of an existing webhook subscription.
@@ -4589,7 +4591,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4669,7 +4671,7 @@ class BaaSWebhooksApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionIndex200Response",
             '422': None,
             '401': None,
             '403': None,

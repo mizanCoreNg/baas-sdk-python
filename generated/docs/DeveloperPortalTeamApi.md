@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **developer_team_accept_invite**
-> VirtualAccountQueryIndex200Response developer_team_accept_invite(x_tenant_id, accept_invite_request)
+> DeveloperTeamAcceptInvite201Response developer_team_accept_invite(x_tenant_id, accept_invite_request)
 
 Accept a team invitation
 
@@ -25,7 +25,7 @@ Public, token-gated. Verifies the email/token pair, sets the new password, and a
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.accept_invite_request import AcceptInviteRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_team_accept_invite201_response import DeveloperTeamAcceptInvite201Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperTeamAcceptInvite201Response**](DeveloperTeamAcceptInvite201Response.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_team_index**
-> VirtualAccountQueryIndex200Response developer_team_index(x_tenant_id)
+> DeveloperTeamAcceptInvite201Response developer_team_index(x_tenant_id)
 
 List team members
 
@@ -103,7 +103,7 @@ Returns all PartnerUsers belonging to the authenticated partner.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_team_accept_invite201_response import DeveloperTeamAcceptInvite201Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperTeamAcceptInvite201Response**](DeveloperTeamAcceptInvite201Response.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_team_invite**
-> VirtualAccountQueryIndex200Response developer_team_invite(x_tenant_id, invite_member_request)
+> DeveloperTeamAcceptInvite201Response developer_team_invite(x_tenant_id, invite_member_request)
 
 Invite a team member
 
@@ -199,8 +199,8 @@ Invites a teammate by email + role. Owner/admin only. The member is created with
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.developer_team_accept_invite201_response import DeveloperTeamAcceptInvite201Response
 from mizancore_baas_generated.models.invite_member_request import InviteMemberRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperTeamAcceptInvite201Response**](DeveloperTeamAcceptInvite201Response.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_team_remove**
-> VirtualAccountQueryIndex200Response developer_team_remove(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_team_remove(id, x_tenant_id)
 
 Remove a team member
 
@@ -300,7 +300,7 @@ Removes a member from the partner team. Owner/admin only. The last owner cannot 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_team_resend_invite**
-> VirtualAccountQueryIndex200Response developer_team_resend_invite(id, x_tenant_id)
+> DeveloperTeamAcceptInvite201Response developer_team_resend_invite(id, x_tenant_id)
 
 Resend a team invitation
 
@@ -401,7 +401,7 @@ Re-issues the one-time invite token for a member who has not yet accepted. Owner
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_team_accept_invite201_response import DeveloperTeamAcceptInvite201Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperTeamAcceptInvite201Response**](DeveloperTeamAcceptInvite201Response.md)
 
 ### Authorization
 
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_team_role**
-> VirtualAccountQueryIndex200Response developer_team_role(id, x_tenant_id, change_member_role_request)
+> DeveloperTeamAcceptInvite201Response developer_team_role(id, x_tenant_id, change_member_role_request)
 
 Change a team member role
 
@@ -503,7 +503,7 @@ Updates a member role. Owner/admin only. The last owner cannot be demoted (422).
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.change_member_role_request import ChangeMemberRoleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_team_accept_invite201_response import DeveloperTeamAcceptInvite201Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperTeamAcceptInvite201Response**](DeveloperTeamAcceptInvite201Response.md)
 
 ### Authorization
 

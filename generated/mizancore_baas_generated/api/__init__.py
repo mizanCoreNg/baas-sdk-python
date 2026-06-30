@@ -2,6 +2,7 @@
 
 # import apis into api package
 from mizancore_baas_generated.api.baa_s_balance_api import BaaSBalanceApi
+from mizancore_baas_generated.api.baa_s_fees_api import BaaSFeesApi
 from mizancore_baas_generated.api.baa_s_transactions_api import BaaSTransactionsApi
 from mizancore_baas_generated.api.baa_s_virtual_accounts_api import BaaSVirtualAccountsApi
 from mizancore_baas_generated.api.baa_s_wallet_api import BaaSWalletApi

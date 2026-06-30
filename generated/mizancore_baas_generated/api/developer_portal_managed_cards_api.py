@@ -20,10 +20,11 @@ from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.issue_managed_card_request import IssueManagedCardRequest
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
+from mizancore_baas_generated.models.managed_card_read_transactions200_response import ManagedCardReadTransactions200Response
 from mizancore_baas_generated.models.set_managed_card_limits_request import SetManagedCardLimitsRequest
 from mizancore_baas_generated.models.set_managed_card_pin_request import SetManagedCardPinRequest
 from mizancore_baas_generated.models.terminate_managed_card_request import TerminateManagedCardRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -63,7 +64,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Freeze a managed card
 
         Freezes (suspends) one of the partner's managed cards — reversible via unfreeze. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -113,8 +114,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -153,7 +154,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Freeze a managed card
 
         Freezes (suspends) one of the partner's managed cards — reversible via unfreeze. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -203,8 +204,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -293,8 +294,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -405,7 +406,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """List managed cards for an account
 
         Lists every card bound to one of the partner's sponsored accounts, newest first. Managed partners only; MANAGE_CARD consent required. Returns masked PANs only (never the raw card).
@@ -449,7 +450,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -484,7 +485,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """List managed cards for an account
 
         Lists every card bound to one of the partner's sponsored accounts, newest first. Managed partners only; MANAGE_CARD consent required. Returns masked PANs only (never the raw card).
@@ -528,7 +529,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -607,7 +608,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -712,7 +713,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Issue a managed virtual card
 
         Issues a VIRTUAL debit card for one of the partner's sponsored accounts, inheriting the MFB tenant's card scheme/processor (sandbox → Fake/Mock adapter, no real card minted). Managed partners only; ISSUE_CARD consent required. Returns a masked PAN, never the raw card. Idempotent.
@@ -762,8 +763,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -802,7 +803,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Issue a managed virtual card
 
         Issues a VIRTUAL debit card for one of the partner's sponsored accounts, inheriting the MFB tenant's card scheme/processor (sandbox → Fake/Mock adapter, no real card minted). Managed partners only; ISSUE_CARD consent required. Returns a masked PAN, never the raw card. Idempotent.
@@ -852,8 +853,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -942,8 +943,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1070,7 +1071,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Set managed card spending limits
 
         Sets per-card spending limits (daily ATM/POS/web + per-transaction, all in kobo) on a managed card. Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required.
@@ -1123,7 +1124,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1163,7 +1164,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Set managed card spending limits
 
         Sets per-card spending limits (daily ATM/POS/web + per-transaction, all in kobo) on a managed card. Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required.
@@ -1216,7 +1217,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1309,7 +1310,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1439,7 +1440,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Set or change a managed card PIN
 
         Sets or changes a managed card's PIN via the processor's secure PIN path. The raw PIN is transient — never persisted or logged at any layer. Managed partners only; MANAGE_CARD consent required. Returns the masked card (no PIN echo).
@@ -1492,8 +1493,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1533,7 +1534,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Set or change a managed card PIN
 
         Sets or changes a managed card's PIN via the processor's secure PIN path. The raw PIN is transient — never persisted or logged at any layer. Managed partners only; MANAGE_CARD consent required. Returns the masked card (no PIN echo).
@@ -1586,8 +1587,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1680,8 +1681,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1809,7 +1810,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Show a managed card
 
         Returns one of the partner's managed cards — status, masked PAN + last4, expiry, network/scheme, and lifecycle state. Managed partners only; MANAGE_CARD consent + card ownership required. Never the raw card.
@@ -1856,7 +1857,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1892,7 +1893,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Show a managed card
 
         Returns one of the partner's managed cards — status, masked PAN + last4, expiry, network/scheme, and lifecycle state. Managed partners only; MANAGE_CARD consent + card ownership required. Never the raw card.
@@ -1939,7 +1940,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2022,7 +2023,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2131,7 +2132,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Terminate a managed card
 
         Permanently terminates a managed card — IRREVERSIBLE (the card can never transact or be re-activated). Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required. Returns the masked card.
@@ -2184,8 +2185,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -2225,7 +2226,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Terminate a managed card
 
         Permanently terminates a managed card — IRREVERSIBLE (the card can never transact or be re-activated). Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required. Returns the masked card.
@@ -2278,8 +2279,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -2372,8 +2373,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -2503,7 +2504,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadTransactions200Response:
         """List managed card transactions
 
         Returns a paginated transaction history for one of the partner's managed cards, newest first. Money values are in kobo. Managed partners only; requires a granted TRANSACTION_HISTORY consent for the customer (stronger than MANAGE_CARD — reading card spend history is a distinct purpose) + card ownership.
@@ -2556,7 +2557,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadTransactions200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2594,7 +2595,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadTransactions200Response]:
         """List managed card transactions
 
         Returns a paginated transaction history for one of the partner's managed cards, newest first. Money values are in kobo. Managed partners only; requires a granted TRANSACTION_HISTORY consent for the customer (stronger than MANAGE_CARD — reading card spend history is a distinct purpose) + card ownership.
@@ -2647,7 +2648,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadTransactions200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2738,7 +2739,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadTransactions200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -2856,7 +2857,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Unfreeze a managed card
 
         Unfreezes (resumes) a previously-frozen managed card → active. A terminated card can never be unfrozen. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -2906,8 +2907,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -2946,7 +2947,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Unfreeze a managed card
 
         Unfreezes (resumes) a previously-frozen managed card → active. A terminated card can never be unfrozen. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -2996,8 +2997,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3086,8 +3087,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3200,7 +3201,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Issue a managed virtual card
 
         Issues a VIRTUAL debit card for one of the partner's sponsored accounts, inheriting the MFB tenant's card scheme/processor (sandbox → Fake/Mock adapter, no real card minted). Managed partners only; ISSUE_CARD consent required. Returns a masked PAN, never the raw card. Idempotent.
@@ -3250,8 +3251,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3290,7 +3291,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Issue a managed virtual card
 
         Issues a VIRTUAL debit card for one of the partner's sponsored accounts, inheriting the MFB tenant's card scheme/processor (sandbox → Fake/Mock adapter, no real card minted). Managed partners only; ISSUE_CARD consent required. Returns a masked PAN, never the raw card. Idempotent.
@@ -3340,8 +3341,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3430,8 +3431,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3557,7 +3558,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Freeze a managed card
 
         Freezes (suspends) one of the partner's managed cards — reversible via unfreeze. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -3607,8 +3608,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3647,7 +3648,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Freeze a managed card
 
         Freezes (suspends) one of the partner's managed cards — reversible via unfreeze. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -3697,8 +3698,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3787,8 +3788,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -3902,7 +3903,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Set managed card spending limits
 
         Sets per-card spending limits (daily ATM/POS/web + per-transaction, all in kobo) on a managed card. Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required.
@@ -3955,7 +3956,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3995,7 +3996,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Set managed card spending limits
 
         Sets per-card spending limits (daily ATM/POS/web + per-transaction, all in kobo) on a managed card. Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required.
@@ -4048,7 +4049,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4141,7 +4142,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4271,7 +4272,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Set or change a managed card PIN
 
         Sets or changes a managed card's PIN via the processor's secure PIN path. The raw PIN is transient — never persisted or logged at any layer. Managed partners only; MANAGE_CARD consent required. Returns the masked card (no PIN echo).
@@ -4324,8 +4325,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4365,7 +4366,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Set or change a managed card PIN
 
         Sets or changes a managed card's PIN via the processor's secure PIN path. The raw PIN is transient — never persisted or logged at any layer. Managed partners only; MANAGE_CARD consent required. Returns the masked card (no PIN echo).
@@ -4418,8 +4419,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4512,8 +4513,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -4643,7 +4644,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Terminate a managed card
 
         Permanently terminates a managed card — IRREVERSIBLE (the card can never transact or be re-activated). Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required. Returns the masked card.
@@ -4696,8 +4697,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -4737,7 +4738,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Terminate a managed card
 
         Permanently terminates a managed card — IRREVERSIBLE (the card can never transact or be re-activated). Partner-authorized: managed partners only; MANAGE_CARD consent + card ownership required. Returns the masked card.
@@ -4790,8 +4791,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -4884,8 +4885,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -5014,7 +5015,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Unfreeze a managed card
 
         Unfreezes (resumes) a previously-frozen managed card → active. A terminated card can never be unfrozen. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -5064,8 +5065,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -5104,7 +5105,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Unfreeze a managed card
 
         Unfreezes (resumes) a previously-frozen managed card → active. A terminated card can never be unfrozen. Managed partners only; MANAGE_CARD consent required. Idempotent. Returns the masked card.
@@ -5154,8 +5155,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -5244,8 +5245,8 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCardReadIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -5356,7 +5357,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """List managed cards for an account
 
         Lists every card bound to one of the partner's sponsored accounts, newest first. Managed partners only; MANAGE_CARD consent required. Returns masked PANs only (never the raw card).
@@ -5400,7 +5401,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -5435,7 +5436,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """List managed cards for an account
 
         Lists every card bound to one of the partner's sponsored accounts, newest first. Managed partners only; MANAGE_CARD consent required. Returns masked PANs only (never the raw card).
@@ -5479,7 +5480,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -5558,7 +5559,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -5662,7 +5663,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadIndex200Response:
         """Show a managed card
 
         Returns one of the partner's managed cards — status, masked PAN + last4, expiry, network/scheme, and lifecycle state. Managed partners only; MANAGE_CARD consent + card ownership required. Never the raw card.
@@ -5709,7 +5710,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -5745,7 +5746,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadIndex200Response]:
         """Show a managed card
 
         Returns one of the partner's managed cards — status, masked PAN + last4, expiry, network/scheme, and lifecycle state. Managed partners only; MANAGE_CARD consent + card ownership required. Never the raw card.
@@ -5792,7 +5793,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -5875,7 +5876,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -5984,7 +5985,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCardReadTransactions200Response:
         """List managed card transactions
 
         Returns a paginated transaction history for one of the partner's managed cards, newest first. Money values are in kobo. Managed partners only; requires a granted TRANSACTION_HISTORY consent for the customer (stronger than MANAGE_CARD — reading card spend history is a distinct purpose) + card ownership.
@@ -6037,7 +6038,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadTransactions200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -6075,7 +6076,7 @@ class DeveloperPortalManagedCardsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCardReadTransactions200Response]:
         """List managed card transactions
 
         Returns a paginated transaction history for one of the partner's managed cards, newest first. Money values are in kobo. Managed partners only; requires a granted TRANSACTION_HISTORY consent for the customer (stronger than MANAGE_CARD — reading card spend history is a distinct purpose) + card ownership.
@@ -6128,7 +6129,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadTransactions200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -6219,7 +6220,7 @@ class DeveloperPortalManagedCardsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCardReadTransactions200Response",
             '401': None,
             '403': None,
             '404': None,

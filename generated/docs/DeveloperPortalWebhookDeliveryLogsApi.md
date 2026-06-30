@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **webhook_delivery_log_index**
-> VirtualAccountQueryIndex200Response webhook_delivery_log_index(x_tenant_id)
+> WebhookSubscriptionDestroy204Response webhook_delivery_log_index(x_tenant_id)
 
 List webhook delivery logs
 
@@ -23,7 +23,7 @@ Returns a paginated list of webhook delivery attempts for the authenticated part
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_delivery_log_retry**
-> VirtualAccountQueryIndex200Response webhook_delivery_log_retry(id, x_tenant_id)
+> WebhookDeliveryLogRetry201Response webhook_delivery_log_retry(id, x_tenant_id)
 
 Retry a failed webhook delivery
 
@@ -119,7 +119,7 @@ Re-queues a failed webhook delivery for retry. Only failed deliveries can be ret
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_delivery_log_retry201_response import WebhookDeliveryLogRetry201Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookDeliveryLogRetry201Response**](WebhookDeliveryLogRetry201Response.md)
 
 ### Authorization
 

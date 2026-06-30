@@ -17,24 +17,25 @@ import json
 import pprint
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
 from typing import Any, Dict, List, Optional
+from mizancore_baas_generated.models.virtual_account_resource import VirtualAccountResource
 from pydantic import StrictStr, Field
 from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self
 
-VIRTUALACCOUNTQUERYINDEX200RESPONSEDATA_ONE_OF_SCHEMAS = ["List[object]", "object"]
+VIRTUALACCOUNTQUERYINDEX200RESPONSEDATA_ONE_OF_SCHEMAS = ["List[VirtualAccountResource]", "VirtualAccountResource", "object"]
 
 class VirtualAccountQueryIndex200ResponseData(BaseModel):
     """
     VirtualAccountQueryIndex200ResponseData
     """
-    # data type: object
-    oneof_schema_1_validator: Optional[Dict[str, Any]] = None
-    # data type: List[object]
-    oneof_schema_2_validator: Optional[List[Dict[str, Any]]] = None
+    # data type: VirtualAccountResource
+    oneof_schema_1_validator: Optional[VirtualAccountResource] = None
+    # data type: List[VirtualAccountResource]
+    oneof_schema_2_validator: Optional[List[VirtualAccountResource]] = None
     # data type: object
     oneof_schema_3_validator: Optional[Dict[str, Any]] = None
-    actual_instance: Optional[Union[List[object], object]] = None
-    one_of_schemas: Set[str] = { "List[object]", "object" }
+    actual_instance: Optional[Union[List[VirtualAccountResource], VirtualAccountResource, object]] = None
+    one_of_schemas: Set[str] = { "List[VirtualAccountResource]", "VirtualAccountResource", "object" }
 
     model_config = ConfigDict(
         validate_assignment=True,
@@ -57,13 +58,12 @@ class VirtualAccountQueryIndex200ResponseData(BaseModel):
         instance = VirtualAccountQueryIndex200ResponseData.model_construct()
         error_messages = []
         match = 0
-        # validate data type: object
-        try:
-            instance.oneof_schema_1_validator = v
+        # validate data type: VirtualAccountResource
+        if not isinstance(v, VirtualAccountResource):
+            error_messages.append(f"Error! Input type `{type(v)}` is not `VirtualAccountResource`")
+        else:
             match += 1
-        except (ValidationError, ValueError) as e:
-            error_messages.append(str(e))
-        # validate data type: List[object]
+        # validate data type: List[VirtualAccountResource]
         try:
             instance.oneof_schema_2_validator = v
             match += 1
@@ -77,10 +77,10 @@ class VirtualAccountQueryIndex200ResponseData(BaseModel):
             error_messages.append(str(e))
         if match > 1:
             # more than 1 match
-            raise ValueError("Multiple matches found when setting `actual_instance` in VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[object], object. Details: " + ", ".join(error_messages))
+            raise ValueError("Multiple matches found when setting `actual_instance` in VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[VirtualAccountResource], VirtualAccountResource, object. Details: " + ", ".join(error_messages))
         elif match == 0:
             # no match
-            raise ValueError("No match found when setting `actual_instance` in VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[object], object. Details: " + ", ".join(error_messages))
+            raise ValueError("No match found when setting `actual_instance` in VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[VirtualAccountResource], VirtualAccountResource, object. Details: " + ", ".join(error_messages))
         else:
             return v
 
@@ -95,16 +95,13 @@ class VirtualAccountQueryIndex200ResponseData(BaseModel):
         error_messages = []
         match = 0
 
-        # deserialize data into object
+        # deserialize data into VirtualAccountResource
         try:
-            # validation
-            instance.oneof_schema_1_validator = json.loads(json_str)
-            # assign value to actual_instance
-            instance.actual_instance = instance.oneof_schema_1_validator
+            instance.actual_instance = VirtualAccountResource.from_json(json_str)
             match += 1
         except (ValidationError, ValueError) as e:
             error_messages.append(str(e))
-        # deserialize data into List[object]
+        # deserialize data into List[VirtualAccountResource]
         try:
             # validation
             instance.oneof_schema_2_validator = json.loads(json_str)
@@ -125,10 +122,10 @@ class VirtualAccountQueryIndex200ResponseData(BaseModel):
 
         if match > 1:
             # more than 1 match
-            raise ValueError("Multiple matches found when deserializing the JSON string into VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[object], object. Details: " + ", ".join(error_messages))
+            raise ValueError("Multiple matches found when deserializing the JSON string into VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[VirtualAccountResource], VirtualAccountResource, object. Details: " + ", ".join(error_messages))
         elif match == 0:
             # no match
-            raise ValueError("No match found when deserializing the JSON string into VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[object], object. Details: " + ", ".join(error_messages))
+            raise ValueError("No match found when deserializing the JSON string into VirtualAccountQueryIndex200ResponseData with oneOf schemas: List[VirtualAccountResource], VirtualAccountResource, object. Details: " + ", ".join(error_messages))
         else:
             return instance
 
@@ -142,7 +139,7 @@ class VirtualAccountQueryIndex200ResponseData(BaseModel):
         else:
             return json.dumps(self.actual_instance)
 
-    def to_dict(self) -> Optional[Union[Dict[str, Any], List[object], object]]:
+    def to_dict(self) -> Optional[Union[Dict[str, Any], List[VirtualAccountResource], VirtualAccountResource, object]]:
         """Returns the dict representation of the actual instance"""
         if self.actual_instance is None:
             return None

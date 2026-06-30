@@ -38,7 +38,8 @@ class TestInitiateWithdrawalRequest(unittest.TestCase):
                 amount = 100,
                 destination_account = '04807288800123456789',
                 destination_bank = '012',
-                narration = ''
+                narration = '',
+                source_account = '04807288800123456789'
             )
         else:
             return InitiateWithdrawalRequest(

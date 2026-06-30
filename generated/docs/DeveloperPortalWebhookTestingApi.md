@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **webhook_testing_send_test_event**
-> VirtualAccountQueryIndex200Response webhook_testing_send_test_event(subscription_id, x_tenant_id, send_test_webhook_request)
+> WebhookSubscriptionDestroy204Response webhook_testing_send_test_event(subscription_id, x_tenant_id, send_test_webhook_request)
 
 Send a test webhook event
 
@@ -23,7 +23,7 @@ Sends a test webhook payload to the specified subscription URL synchronously and
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.send_test_webhook_request import SendTestWebhookRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 

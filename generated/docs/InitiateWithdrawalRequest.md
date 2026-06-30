@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **destination_account** | **str** |  | 
 **destination_bank** | **str** |  | 
 **narration** | **str** |  | [optional] 
+**source_account** | **str** |  | [optional] 
 
 ## Example
 

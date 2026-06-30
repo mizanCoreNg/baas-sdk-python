@@ -18,8 +18,9 @@ from typing_extensions import Annotated
 
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
+from mizancore_baas_generated.models.developer_auth_me200_response import DeveloperAuthMe200Response
 from mizancore_baas_generated.models.developer_login_request import DeveloperLoginRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -56,7 +57,7 @@ class DeveloperPortalAuthenticationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Developer login
 
         Authenticates a partner user with email and password, returning a Bearer token. If MFA is enabled, a partial token (mfa:verify ability) is issued and the client must complete MFA verification to obtain a full-access token.
@@ -97,8 +98,8 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -132,7 +133,7 @@ class DeveloperPortalAuthenticationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Developer login
 
         Authenticates a partner user with email and password, returning a Bearer token. If MFA is enabled, a partial token (mfa:verify ability) is issued and the client must complete MFA verification to obtain a full-access token.
@@ -173,8 +174,8 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -249,8 +250,8 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -358,7 +359,7 @@ class DeveloperPortalAuthenticationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Developer logout
 
         Revokes all API tokens for the authenticated partner user, ending the session.
@@ -396,8 +397,8 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -430,7 +431,7 @@ class DeveloperPortalAuthenticationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Developer logout
 
         Revokes all API tokens for the authenticated partner user, ending the session.
@@ -468,8 +469,8 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -540,8 +541,8 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -636,7 +637,7 @@ class DeveloperPortalAuthenticationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperAuthMe200Response:
         """Get current developer profile
 
         Returns the profile of the currently authenticated partner user.
@@ -674,7 +675,7 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperAuthMe200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -706,7 +707,7 @@ class DeveloperPortalAuthenticationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperAuthMe200Response]:
         """Get current developer profile
 
         Returns the profile of the currently authenticated partner user.
@@ -744,7 +745,7 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperAuthMe200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -814,7 +815,7 @@ class DeveloperPortalAuthenticationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperAuthMe200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",

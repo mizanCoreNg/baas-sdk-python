@@ -18,7 +18,8 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_delivery_log_retry201_response import WebhookDeliveryLogRetry201Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -54,7 +55,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """List webhook delivery logs
 
         Returns a paginated list of webhook delivery attempts for the authenticated partner, with optional filtering by status and event type.
@@ -92,7 +93,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -124,7 +125,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """List webhook delivery logs
 
         Returns a paginated list of webhook delivery attempts for the authenticated partner, with optional filtering by status and event type.
@@ -162,7 +163,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -232,7 +233,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -327,7 +328,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookDeliveryLogRetry201Response:
         """Retry a failed webhook delivery
 
         Re-queues a failed webhook delivery for retry. Only failed deliveries can be retried.
@@ -368,8 +369,8 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookDeliveryLogRetry201Response",
+            '200': "WebhookDeliveryLogRetry201Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -405,7 +406,7 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookDeliveryLogRetry201Response]:
         """Retry a failed webhook delivery
 
         Re-queues a failed webhook delivery for retry. Only failed deliveries can be retried.
@@ -446,8 +447,8 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookDeliveryLogRetry201Response",
+            '200': "WebhookDeliveryLogRetry201Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -524,8 +525,8 @@ class DeveloperPortalWebhookDeliveryLogsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookDeliveryLogRetry201Response",
+            '200': "WebhookDeliveryLogRetry201Response",
             '422': "ValidationError",
             '401': None,
             '403': None,

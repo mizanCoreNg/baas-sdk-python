@@ -31,11 +31,22 @@ class InitiateWithdrawalRequest(BaseModel):
     destination_account: Annotated[str, Field(min_length=10, strict=True, max_length=10)]
     destination_bank: Annotated[str, Field(min_length=3, strict=True, max_length=3)]
     narration: Optional[Annotated[str, Field(strict=True, max_length=100)]] = None
-    __properties: ClassVar[List[str]] = ["amount", "destination_account", "destination_bank", "narration"]
+    source_account: Optional[Annotated[str, Field(min_length=10, strict=True, max_length=10)]] = None
+    __properties: ClassVar[List[str]] = ["amount", "destination_account", "destination_bank", "narration", "source_account"]
 
     @field_validator('destination_account')
     def destination_account_validate_regular_expression(cls, value):
         """Validates the regular expression"""
+        if not re.match(r"^\d{10}$", value):
+            raise ValueError(r"must validate the regular expression /^\d{10}$/")
+        return value
+
+    @field_validator('source_account')
+    def source_account_validate_regular_expression(cls, value):
+        """Validates the regular expression"""
+        if value is None:
+            return value
+
         if not re.match(r"^\d{10}$", value):
             raise ValueError(r"must validate the regular expression /^\d{10}$/")
         return value
@@ -84,6 +95,11 @@ class InitiateWithdrawalRequest(BaseModel):
         if self.narration is None and "narration" in self.model_fields_set:
             _dict['narration'] = None
 
+        # set to None if source_account (nullable) is None
+        # and model_fields_set contains the field
+        if self.source_account is None and "source_account" in self.model_fields_set:
+            _dict['source_account'] = None
+
         return _dict
 
     @classmethod
@@ -99,7 +115,8 @@ class InitiateWithdrawalRequest(BaseModel):
             "amount": obj.get("amount"),
             "destination_account": obj.get("destination_account"),
             "destination_bank": obj.get("destination_bank"),
-            "narration": obj.get("narration")
+            "narration": obj.get("narration"),
+            "source_account": obj.get("source_account")
         })
         return _obj
 

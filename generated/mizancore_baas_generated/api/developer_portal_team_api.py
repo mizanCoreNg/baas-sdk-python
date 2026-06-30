@@ -20,8 +20,9 @@ from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.accept_invite_request import AcceptInviteRequest
 from mizancore_baas_generated.models.change_member_role_request import ChangeMemberRoleRequest
+from mizancore_baas_generated.models.developer_team_accept_invite201_response import DeveloperTeamAcceptInvite201Response
 from mizancore_baas_generated.models.invite_member_request import InviteMemberRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -58,7 +59,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperTeamAcceptInvite201Response:
         """Accept a team invitation
 
         Public, token-gated. Verifies the email/token pair, sets the new password, and activates the member so they can log in.
@@ -99,8 +100,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -134,7 +135,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperTeamAcceptInvite201Response]:
         """Accept a team invitation
 
         Public, token-gated. Verifies the email/token pair, sets the new password, and activates the member so they can log in.
@@ -175,8 +176,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -251,8 +252,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -360,7 +361,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperTeamAcceptInvite201Response:
         """List team members
 
         Returns all PartnerUsers belonging to the authenticated partner.
@@ -398,7 +399,7 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -430,7 +431,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperTeamAcceptInvite201Response]:
         """List team members
 
         Returns all PartnerUsers belonging to the authenticated partner.
@@ -468,7 +469,7 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -538,7 +539,7 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -633,7 +634,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperTeamAcceptInvite201Response:
         """Invite a team member
 
         Invites a teammate by email + role. Owner/admin only. The member is created without a password and must accept the invite to log in.
@@ -674,8 +675,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -709,7 +710,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperTeamAcceptInvite201Response]:
         """Invite a team member
 
         Invites a teammate by email + role. Owner/admin only. The member is created without a password and must accept the invite to log in.
@@ -750,8 +751,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -826,8 +827,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -939,7 +940,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Remove a team member
 
         Removes a member from the partner team. Owner/admin only. The last owner cannot be removed (422).
@@ -980,8 +981,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1016,7 +1017,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Remove a team member
 
         Removes a member from the partner team. Owner/admin only. The last owner cannot be removed (422).
@@ -1057,8 +1058,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1134,8 +1135,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1235,7 +1236,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperTeamAcceptInvite201Response:
         """Resend a team invitation
 
         Re-issues the one-time invite token for a member who has not yet accepted. Owner/admin only.
@@ -1276,8 +1277,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1312,7 +1313,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperTeamAcceptInvite201Response]:
         """Resend a team invitation
 
         Re-issues the one-time invite token for a member who has not yet accepted. Owner/admin only.
@@ -1353,8 +1354,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1430,8 +1431,8 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperTeamAcceptInvite201Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1532,7 +1533,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperTeamAcceptInvite201Response:
         """Change a team member role
 
         Updates a member role. Owner/admin only. The last owner cannot be demoted (422).
@@ -1576,7 +1577,7 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1612,7 +1613,7 @@ class DeveloperPortalTeamApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperTeamAcceptInvite201Response]:
         """Change a team member role
 
         Updates a member role. Owner/admin only. The last owner cannot be demoted (422).
@@ -1656,7 +1657,7 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1736,7 +1737,7 @@ class DeveloperPortalTeamApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperTeamAcceptInvite201Response",
             '422': None,
             '401': None,
             '403': None,

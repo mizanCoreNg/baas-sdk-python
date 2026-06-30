@@ -18,8 +18,9 @@ from typing_extensions import Annotated
 
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
+from mizancore_baas_generated.models.baas_balance_fee_preview201_response import BaasBalanceFeePreview201Response
 from mizancore_baas_generated.models.fee_preview_request import FeePreviewRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_wallet_balance200_response import PartnerWalletBalance200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -55,7 +56,7 @@ class BaaSBalanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerWalletBalance200Response:
         """Get settlement account balance
 
         Returns the current balance of the partner settlement account in both kobo and naira, along with settlement account details.
@@ -93,7 +94,7 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerWalletBalance200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -125,7 +126,7 @@ class BaaSBalanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerWalletBalance200Response]:
         """Get settlement account balance
 
         Returns the current balance of the partner settlement account in both kobo and naira, along with settlement account details.
@@ -163,7 +164,7 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerWalletBalance200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -233,7 +234,7 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerWalletBalance200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -328,10 +329,10 @@ class BaaSBalanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> BaasBalanceFeePreview201Response:
         """Preview withdrawal fee
 
-        Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+        Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -369,8 +370,8 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "BaasBalanceFeePreview201Response",
+            '200': "BaasBalanceFeePreview201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -404,10 +405,10 @@ class BaaSBalanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[BaasBalanceFeePreview201Response]:
         """Preview withdrawal fee
 
-        Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+        Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -445,8 +446,8 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "BaasBalanceFeePreview201Response",
+            '200': "BaasBalanceFeePreview201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -483,7 +484,7 @@ class BaaSBalanceApi:
     ) -> RESTResponseType:
         """Preview withdrawal fee
 
-        Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+        Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -521,8 +522,8 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "BaasBalanceFeePreview201Response",
+            '200': "BaasBalanceFeePreview201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -634,10 +635,10 @@ class BaaSBalanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> BaasBalanceFeePreview201Response:
         """Preview withdrawal fee
 
-        Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+        Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -675,8 +676,8 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "BaasBalanceFeePreview201Response",
+            '200': "BaasBalanceFeePreview201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -710,10 +711,10 @@ class BaaSBalanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[BaasBalanceFeePreview201Response]:
         """Preview withdrawal fee
 
-        Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+        Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -751,8 +752,8 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "BaasBalanceFeePreview201Response",
+            '200': "BaasBalanceFeePreview201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -789,7 +790,7 @@ class BaaSBalanceApi:
     ) -> RESTResponseType:
         """Preview withdrawal fee
 
-        Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+        Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -827,8 +828,8 @@ class BaaSBalanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "BaasBalanceFeePreview201Response",
+            '200': "BaasBalanceFeePreview201Response",
             '422': None,
             '401': None,
             '403': None,

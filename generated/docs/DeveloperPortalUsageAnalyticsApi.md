@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **usage_analytics_breakdown**
-> VirtualAccountQueryIndex200Response usage_analytics_breakdown(x_tenant_id)
+> UsageAnalyticsSummary200Response usage_analytics_breakdown(x_tenant_id)
 
 Get API usage breakdown
 
@@ -24,7 +24,7 @@ Returns per-endpoint API usage breakdown for the authenticated partner over the 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.usage_analytics_summary200_response import UsageAnalyticsSummary200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**UsageAnalyticsSummary200Response**](UsageAnalyticsSummary200Response.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **usage_analytics_rate_limit_status**
-> VirtualAccountQueryIndex200Response usage_analytics_rate_limit_status(x_tenant_id)
+> UsageAnalyticsRateLimitStatus200Response usage_analytics_rate_limit_status(x_tenant_id)
 
 Get current rate limit status
 
@@ -120,7 +120,7 @@ Returns the current rate limit status for the authenticated partner including us
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.usage_analytics_rate_limit_status200_response import UsageAnalyticsRateLimitStatus200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**UsageAnalyticsRateLimitStatus200Response**](UsageAnalyticsRateLimitStatus200Response.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **usage_analytics_summary**
-> VirtualAccountQueryIndex200Response usage_analytics_summary(x_tenant_id)
+> UsageAnalyticsSummary200Response usage_analytics_summary(x_tenant_id)
 
 Get API usage summary
 
@@ -216,7 +216,7 @@ Returns aggregated API usage statistics for the authenticated partner over the s
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.usage_analytics_summary200_response import UsageAnalyticsSummary200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**UsageAnalyticsSummary200Response**](UsageAnalyticsSummary200Response.md)
 
 ### Authorization
 

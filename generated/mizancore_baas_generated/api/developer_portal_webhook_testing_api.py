@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.send_test_webhook_request import SendTestWebhookRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -57,7 +57,7 @@ class DeveloperPortalWebhookTestingApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Send a test webhook event
 
         Sends a test webhook payload to the specified subscription URL synchronously and returns the delivery result. Useful for verifying endpoint connectivity.
@@ -101,8 +101,8 @@ class DeveloperPortalWebhookTestingApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -138,7 +138,7 @@ class DeveloperPortalWebhookTestingApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Send a test webhook event
 
         Sends a test webhook payload to the specified subscription URL synchronously and returns the delivery result. Useful for verifying endpoint connectivity.
@@ -182,8 +182,8 @@ class DeveloperPortalWebhookTestingApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -263,8 +263,8 @@ class DeveloperPortalWebhookTestingApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,

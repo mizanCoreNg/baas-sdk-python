@@ -18,7 +18,8 @@ from typing_extensions import Annotated
 
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.usage_analytics_rate_limit_status200_response import UsageAnalyticsRateLimitStatus200Response
+from mizancore_baas_generated.models.usage_analytics_summary200_response import UsageAnalyticsSummary200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -54,7 +55,7 @@ class DeveloperPortalUsageAnalyticsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> UsageAnalyticsSummary200Response:
         """Get API usage breakdown
 
         Returns per-endpoint API usage breakdown for the authenticated partner over the specified period.
@@ -92,7 +93,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsSummary200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -124,7 +125,7 @@ class DeveloperPortalUsageAnalyticsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[UsageAnalyticsSummary200Response]:
         """Get API usage breakdown
 
         Returns per-endpoint API usage breakdown for the authenticated partner over the specified period.
@@ -162,7 +163,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsSummary200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -232,7 +233,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsSummary200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -326,7 +327,7 @@ class DeveloperPortalUsageAnalyticsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> UsageAnalyticsRateLimitStatus200Response:
         """Get current rate limit status
 
         Returns the current rate limit status for the authenticated partner including used, remaining, and total limits.
@@ -364,7 +365,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsRateLimitStatus200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -396,7 +397,7 @@ class DeveloperPortalUsageAnalyticsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[UsageAnalyticsRateLimitStatus200Response]:
         """Get current rate limit status
 
         Returns the current rate limit status for the authenticated partner including used, remaining, and total limits.
@@ -434,7 +435,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsRateLimitStatus200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -504,7 +505,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsRateLimitStatus200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -598,7 +599,7 @@ class DeveloperPortalUsageAnalyticsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> UsageAnalyticsSummary200Response:
         """Get API usage summary
 
         Returns aggregated API usage statistics for the authenticated partner over the specified period (default: last 24 hours).
@@ -636,7 +637,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsSummary200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -668,7 +669,7 @@ class DeveloperPortalUsageAnalyticsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[UsageAnalyticsSummary200Response]:
         """Get API usage summary
 
         Returns aggregated API usage statistics for the authenticated partner over the specified period (default: last 24 hours).
@@ -706,7 +707,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsSummary200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -776,7 +777,7 @@ class DeveloperPortalUsageAnalyticsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "UsageAnalyticsSummary200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",

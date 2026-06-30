@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **baas_balance_balance**
-> VirtualAccountQueryIndex200Response baas_balance_balance(x_tenant_id)
+> PartnerWalletBalance200Response baas_balance_balance(x_tenant_id)
 
 Get settlement account balance
 
@@ -24,7 +24,7 @@ Returns the current balance of the partner settlement account in both kobo and n
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_wallet_balance200_response import PartnerWalletBalance200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerWalletBalance200Response**](PartnerWalletBalance200Response.md)
 
 ### Authorization
 
@@ -106,11 +106,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **baas_balance_fee_preview**
-> VirtualAccountQueryIndex200Response baas_balance_fee_preview(x_tenant_id, fee_preview_request)
+> BaasBalanceFeePreview201Response baas_balance_fee_preview(x_tenant_id, fee_preview_request)
 
 Preview withdrawal fee
 
-Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
 ### Example
 
@@ -120,8 +120,8 @@ Calculates the fee breakdown for a given withdrawal amount without initiating th
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.baas_balance_fee_preview201_response import BaasBalanceFeePreview201Response
 from mizancore_baas_generated.models.fee_preview_request import FeePreviewRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**BaasBalanceFeePreview201Response**](BaasBalanceFeePreview201Response.md)
 
 ### Authorization
 
@@ -207,11 +207,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_withdrawals_fee_preview**
-> VirtualAccountQueryIndex200Response developer_withdrawals_fee_preview(x_tenant_id, fee_preview_request)
+> BaasBalanceFeePreview201Response developer_withdrawals_fee_preview(x_tenant_id, fee_preview_request)
 
 Preview withdrawal fee
 
-Calculates the fee breakdown for a given withdrawal amount without initiating the withdrawal. Includes platform and MFB fee shares, total debit, and whether the current balance is sufficient.
+Calculates the fee a partner would pay for a given withdrawal amount without initiating the withdrawal. Returns the fee, the total debit, and whether the current balance is sufficient. The internal platform/MFB revenue split is deliberately NOT exposed to partners.
 
 ### Example
 
@@ -221,8 +221,8 @@ Calculates the fee breakdown for a given withdrawal amount without initiating th
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.baas_balance_fee_preview201_response import BaasBalanceFeePreview201Response
 from mizancore_baas_generated.models.fee_preview_request import FeePreviewRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**BaasBalanceFeePreview201Response**](BaasBalanceFeePreview201Response.md)
 
 ### Authorization
 

@@ -19,10 +19,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.add_kyb_officer_request import AddKybOfficerRequest
+from mizancore_baas_generated.models.developer_kyb_officers_add201_response import DeveloperKybOfficersAdd201Response
+from mizancore_baas_generated.models.developer_kyb_show200_response import DeveloperKybShow200Response
 from mizancore_baas_generated.models.update_kyb_business_request import UpdateKybBusinessRequest
 from mizancore_baas_generated.models.update_kyb_officer_request import UpdateKybOfficerRequest
 from mizancore_baas_generated.models.upload_kyb_document_request import UploadKybDocumentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -59,7 +61,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperKybShow200Response:
         """Update KYB business info
 
         Sets registration type, RC number, legal name, tax id and registered address. Owner/admin only. Editable while draft or needs_more_info.
@@ -100,7 +102,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybShow200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -134,7 +136,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperKybShow200Response]:
         """Update KYB business info
 
         Sets registration type, RC number, legal name, tax id and registered address. Owner/admin only. Editable while draft or needs_more_info.
@@ -175,7 +177,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybShow200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -250,7 +252,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybShow200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -362,7 +364,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Upload a KYB document
 
         Multipart upload of a supporting document. Stored via the document storage abstraction. Owner/admin only.
@@ -403,8 +405,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -438,7 +440,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Upload a KYB document
 
         Multipart upload of a supporting document. Stored via the document storage abstraction. Owner/admin only.
@@ -479,8 +481,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -555,8 +557,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -668,7 +670,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperKybOfficersAdd201Response:
         """Add a KYB officer
 
         Attaches a director or beneficial owner. Owner/admin only. BVN is stored hidden and returned masked.
@@ -709,8 +711,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperKybOfficersAdd201Response",
+            '200': "DeveloperKybOfficersAdd201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -744,7 +746,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperKybOfficersAdd201Response]:
         """Add a KYB officer
 
         Attaches a director or beneficial owner. Owner/admin only. BVN is stored hidden and returned masked.
@@ -785,8 +787,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperKybOfficersAdd201Response",
+            '200': "DeveloperKybOfficersAdd201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -861,8 +863,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperKybOfficersAdd201Response",
+            '200': "DeveloperKybOfficersAdd201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -974,7 +976,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Remove a KYB officer
 
         Removes a director/owner. Owner/admin only. BOLA-scoped.
@@ -1015,8 +1017,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1051,7 +1053,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Remove a KYB officer
 
         Removes a director/owner. Owner/admin only. BOLA-scoped.
@@ -1092,8 +1094,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1169,8 +1171,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '204': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '204': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1271,7 +1273,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperKybOfficersAdd201Response:
         """Update a KYB officer
 
         Updates a director/owner. Owner/admin only. BOLA: a cross-partner officer id resolves to 404.
@@ -1315,7 +1317,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybOfficersAdd201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1351,7 +1353,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperKybOfficersAdd201Response]:
         """Update a KYB officer
 
         Updates a director/owner. Owner/admin only. BOLA: a cross-partner officer id resolves to 404.
@@ -1395,7 +1397,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybOfficersAdd201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1475,7 +1477,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybOfficersAdd201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1590,7 +1592,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperKybShow200Response:
         """Get KYB submission
 
         Returns the authenticated partner KYB submission with officers and documents, creating a draft if none exists.
@@ -1628,7 +1630,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybShow200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1660,7 +1662,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperKybShow200Response]:
         """Get KYB submission
 
         Returns the authenticated partner KYB submission with officers and documents, creating a draft if none exists.
@@ -1698,7 +1700,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybShow200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1768,7 +1770,7 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperKybShow200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1862,7 +1864,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperKybShow200Response:
         """Submit KYB for review
 
         Validates completeness and submits the KYB. Owner/admin only. Returns 422 if incomplete.
@@ -1900,8 +1902,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperKybShow200Response",
+            '200': "DeveloperKybShow200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1934,7 +1936,7 @@ class DeveloperPortalKYBApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperKybShow200Response]:
         """Submit KYB for review
 
         Validates completeness and submits the KYB. Owner/admin only. Returns 422 if incomplete.
@@ -1972,8 +1974,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperKybShow200Response",
+            '200': "DeveloperKybShow200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2044,8 +2046,8 @@ class DeveloperPortalKYBApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperKybShow200Response",
+            '200': "DeveloperKybShow200Response",
             '422': None,
             '401': None,
             '403': None,

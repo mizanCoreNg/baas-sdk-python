@@ -18,9 +18,9 @@ from typing_extensions import Annotated
 
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
+from mizancore_baas_generated.models.developer_registration_register201_response import DeveloperRegistrationRegister201Response
 from mizancore_baas_generated.models.register_developer_request import RegisterDeveloperRequest
 from mizancore_baas_generated.models.verify_developer_email_request import VerifyDeveloperEmailRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -57,7 +57,7 @@ class DeveloperPortalRegistrationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperRegistrationRegister201Response:
         """Register as a developer partner
 
         Self-service registration for developers wanting to integrate with the BaaS platform. Creates a partner with pending_approval status.
@@ -98,8 +98,8 @@ class DeveloperPortalRegistrationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperRegistrationRegister201Response",
+            '200': "DeveloperRegistrationRegister201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -135,7 +135,7 @@ class DeveloperPortalRegistrationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperRegistrationRegister201Response]:
         """Register as a developer partner
 
         Self-service registration for developers wanting to integrate with the BaaS platform. Creates a partner with pending_approval status.
@@ -176,8 +176,8 @@ class DeveloperPortalRegistrationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperRegistrationRegister201Response",
+            '200': "DeveloperRegistrationRegister201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -254,8 +254,8 @@ class DeveloperPortalRegistrationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperRegistrationRegister201Response",
+            '200': "DeveloperRegistrationRegister201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -366,7 +366,7 @@ class DeveloperPortalRegistrationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperRegistrationRegister201Response:
         """Verify developer email address
 
         Verifies the developer email address using the token sent during registration.
@@ -407,8 +407,8 @@ class DeveloperPortalRegistrationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperRegistrationRegister201Response",
+            '200': "DeveloperRegistrationRegister201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -442,7 +442,7 @@ class DeveloperPortalRegistrationApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperRegistrationRegister201Response]:
         """Verify developer email address
 
         Verifies the developer email address using the token sent during registration.
@@ -483,8 +483,8 @@ class DeveloperPortalRegistrationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperRegistrationRegister201Response",
+            '200': "DeveloperRegistrationRegister201Response",
             '422': None,
             '401': None,
             '403': None,
@@ -559,8 +559,8 @@ class DeveloperPortalRegistrationApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperRegistrationRegister201Response",
+            '200': "DeveloperRegistrationRegister201Response",
             '422': None,
             '401': None,
             '403': None,

@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 
 # **developer_webhooks_deliveries**
-> VirtualAccountQueryIndex200Response developer_webhooks_deliveries(id, x_tenant_id)
+> WebhookSubscriptionOperationsDeliveries200Response developer_webhooks_deliveries(id, x_tenant_id)
 
 List webhook deliveries
 
@@ -37,7 +37,7 @@ Returns a paginated delivery log for a specific webhook subscription, including 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_operations_deliveries200_response import WebhookSubscriptionOperationsDeliveries200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionOperationsDeliveries200Response**](WebhookSubscriptionOperationsDeliveries200Response.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_destroy**
-> VirtualAccountQueryIndex200Response developer_webhooks_destroy(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_webhooks_destroy(id, x_tenant_id)
 
 Deactivate a webhook subscription
 
@@ -136,7 +136,7 @@ Soft-deactivates a webhook subscription. The subscription record is retained but
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_index**
-> VirtualAccountQueryIndex200Response developer_webhooks_index(x_tenant_id)
+> WebhookSubscriptionIndex200Response developer_webhooks_index(x_tenant_id)
 
 List webhook subscriptions
 
@@ -236,7 +236,7 @@ Returns a paginated list of all webhook subscriptions for the authenticated part
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_rotate_secret**
-> VirtualAccountQueryIndex200Response developer_webhooks_rotate_secret(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_webhooks_rotate_secret(id, x_tenant_id)
 
 Rotate webhook secret
 
@@ -332,7 +332,7 @@ Generates a new signing secret for the webhook subscription. The new secret is r
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_show**
-> VirtualAccountQueryIndex200Response developer_webhooks_show(id, x_tenant_id)
+> WebhookSubscriptionIndex200Response developer_webhooks_show(id, x_tenant_id)
 
 Get webhook subscription details
 
@@ -433,7 +433,7 @@ Retrieves the full details of a specific webhook subscription by its ID, includi
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_store**
-> VirtualAccountQueryIndex200Response developer_webhooks_store(x_tenant_id, store_webhook_subscription_request)
+> WebhookSubscriptionIndex200Response developer_webhooks_store(x_tenant_id, store_webhook_subscription_request)
 
 Create a webhook subscription
 
@@ -533,7 +533,7 @@ Registers a new webhook endpoint URL to receive event notifications. Specify the
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.store_webhook_subscription_request import StoreWebhookSubscriptionRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_test**
-> VirtualAccountQueryIndex200Response developer_webhooks_test(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_webhooks_test(id, x_tenant_id)
 
 Send a test webhook
 
@@ -633,7 +633,7 @@ Sends a test webhook payload to the subscription URL and returns the delivery re
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -720,7 +720,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_webhooks_update**
-> VirtualAccountQueryIndex200Response developer_webhooks_update(id, x_tenant_id, update_webhook_subscription_request)
+> WebhookSubscriptionIndex200Response developer_webhooks_update(id, x_tenant_id, update_webhook_subscription_request)
 
 Update a webhook subscription
 
@@ -735,7 +735,7 @@ Updates the URL or subscribed event types of an existing webhook subscription.
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.update_webhook_subscription_request import UpdateWebhookSubscriptionRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -798,7 +798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -823,7 +823,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_destroy**
-> VirtualAccountQueryIndex200Response webhook_subscription_destroy(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response webhook_subscription_destroy(id, x_tenant_id)
 
 Deactivate a webhook subscription
 
@@ -837,7 +837,7 @@ Soft-deactivates a webhook subscription. The subscription record is retained but
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -898,7 +898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -923,7 +923,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_index**
-> VirtualAccountQueryIndex200Response webhook_subscription_index(x_tenant_id)
+> WebhookSubscriptionIndex200Response webhook_subscription_index(x_tenant_id)
 
 List webhook subscriptions
 
@@ -937,7 +937,7 @@ Returns a paginated list of all webhook subscriptions for the authenticated part
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -996,7 +996,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -1019,7 +1019,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_operations_deliveries**
-> VirtualAccountQueryIndex200Response webhook_subscription_operations_deliveries(id, x_tenant_id)
+> WebhookSubscriptionOperationsDeliveries200Response webhook_subscription_operations_deliveries(id, x_tenant_id)
 
 List webhook deliveries
 
@@ -1033,7 +1033,7 @@ Returns a paginated delivery log for a specific webhook subscription, including 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_operations_deliveries200_response import WebhookSubscriptionOperationsDeliveries200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1094,7 +1094,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionOperationsDeliveries200Response**](WebhookSubscriptionOperationsDeliveries200Response.md)
 
 ### Authorization
 
@@ -1118,7 +1118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_operations_rotate_secret**
-> VirtualAccountQueryIndex200Response webhook_subscription_operations_rotate_secret(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response webhook_subscription_operations_rotate_secret(id, x_tenant_id)
 
 Rotate webhook secret
 
@@ -1132,7 +1132,7 @@ Generates a new signing secret for the webhook subscription. The new secret is r
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1193,7 +1193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -1219,7 +1219,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_operations_test**
-> VirtualAccountQueryIndex200Response webhook_subscription_operations_test(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response webhook_subscription_operations_test(id, x_tenant_id)
 
 Send a test webhook
 
@@ -1233,7 +1233,7 @@ Sends a test webhook payload to the subscription URL and returns the delivery re
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1294,7 +1294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_show**
-> VirtualAccountQueryIndex200Response webhook_subscription_show(id, x_tenant_id)
+> WebhookSubscriptionIndex200Response webhook_subscription_show(id, x_tenant_id)
 
 Get webhook subscription details
 
@@ -1334,7 +1334,7 @@ Retrieves the full details of a specific webhook subscription by its ID, includi
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1395,7 +1395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -1419,7 +1419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_store**
-> VirtualAccountQueryIndex200Response webhook_subscription_store(x_tenant_id, store_webhook_subscription_request)
+> WebhookSubscriptionIndex200Response webhook_subscription_store(x_tenant_id, store_webhook_subscription_request)
 
 Create a webhook subscription
 
@@ -1434,7 +1434,7 @@ Registers a new webhook endpoint URL to receive event notifications. Specify the
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.store_webhook_subscription_request import StoreWebhookSubscriptionRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1495,7 +1495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 
@@ -1520,7 +1520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **webhook_subscription_update**
-> VirtualAccountQueryIndex200Response webhook_subscription_update(id, x_tenant_id, update_webhook_subscription_request)
+> WebhookSubscriptionIndex200Response webhook_subscription_update(id, x_tenant_id, update_webhook_subscription_request)
 
 Update a webhook subscription
 
@@ -1535,7 +1535,7 @@ Updates the URL or subscribed event types of an existing webhook subscription.
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.update_webhook_subscription_request import UpdateWebhookSubscriptionRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_index200_response import WebhookSubscriptionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1598,7 +1598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionIndex200Response**](WebhookSubscriptionIndex200Response.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_statement_show200_response import ManagedCustomerStatementShow200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -55,7 +55,7 @@ class DeveloperPortalManagedStatementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerStatementShow200Response:
         """Get a managed customer account statement
 
         Returns a date-ranged statement (opening/closing balance, per-transaction movements with running balance, summary) for one of the authenticated managed partner's sponsored-customer accounts. Requires a granted TRANSACTION_HISTORY consent for that customer. Money values are in kobo.
@@ -96,7 +96,7 @@ class DeveloperPortalManagedStatementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerStatementShow200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -131,7 +131,7 @@ class DeveloperPortalManagedStatementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerStatementShow200Response]:
         """Get a managed customer account statement
 
         Returns a date-ranged statement (opening/closing balance, per-transaction movements with running balance, summary) for one of the authenticated managed partner's sponsored-customer accounts. Requires a granted TRANSACTION_HISTORY consent for that customer. Money values are in kobo.
@@ -172,7 +172,7 @@ class DeveloperPortalManagedStatementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerStatementShow200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -248,7 +248,7 @@ class DeveloperPortalManagedStatementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerStatementShow200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -348,7 +348,7 @@ class DeveloperPortalManagedStatementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerStatementShow200Response:
         """Get a managed customer account statement
 
         Returns a date-ranged statement (opening/closing balance, per-transaction movements with running balance, summary) for one of the authenticated managed partner's sponsored-customer accounts. Requires a granted TRANSACTION_HISTORY consent for that customer. Money values are in kobo.
@@ -389,7 +389,7 @@ class DeveloperPortalManagedStatementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerStatementShow200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -424,7 +424,7 @@ class DeveloperPortalManagedStatementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerStatementShow200Response]:
         """Get a managed customer account statement
 
         Returns a date-ranged statement (opening/closing balance, per-transaction movements with running balance, summary) for one of the authenticated managed partner's sponsored-customer accounts. Requires a granted TRANSACTION_HISTORY consent for that customer. Money values are in kobo.
@@ -465,7 +465,7 @@ class DeveloperPortalManagedStatementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerStatementShow200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -541,7 +541,7 @@ class DeveloperPortalManagedStatementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerStatementShow200Response",
             '401': None,
             '403': None,
             '404': None,

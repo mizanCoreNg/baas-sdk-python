@@ -18,7 +18,7 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -54,7 +54,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """List partner transactions
 
         Returns a paginated list of all transactions for the authenticated partner. Supports filtering by type, status, date range, reference, and session ID.
@@ -92,7 +92,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -124,7 +124,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """List partner transactions
 
         Returns a paginated list of all transactions for the authenticated partner. Supports filtering by type, status, date range, reference, and session ID.
@@ -162,7 +162,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -232,7 +232,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -327,7 +327,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """Get transaction details
 
         Retrieves the full details of a specific transaction by its ID. Only transactions belonging to the authenticated partner are accessible.
@@ -368,7 +368,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -402,7 +402,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """Get transaction details
 
         Retrieves the full details of a specific transaction by its ID. Only transactions belonging to the authenticated partner are accessible.
@@ -443,7 +443,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -518,7 +518,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -616,7 +616,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """List partner transactions
 
         Returns a paginated list of all transactions for the authenticated partner. Supports filtering by type, status, date range, reference, and session ID.
@@ -654,7 +654,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -686,7 +686,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """List partner transactions
 
         Returns a paginated list of all transactions for the authenticated partner. Supports filtering by type, status, date range, reference, and session ID.
@@ -724,7 +724,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -794,7 +794,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -889,7 +889,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """Get transaction details
 
         Retrieves the full details of a specific transaction by its ID. Only transactions belonging to the authenticated partner are accessible.
@@ -930,7 +930,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -964,7 +964,7 @@ class BaaSTransactionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """Get transaction details
 
         Retrieves the full details of a specific transaction by its ID. Only transactions belonging to the authenticated partner are accessible.
@@ -1005,7 +1005,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1080,7 +1080,7 @@ class BaaSTransactionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **developer_accounts_index**
-> VirtualAccountQueryIndex200Response developer_accounts_index(x_tenant_id)
+> ManagedAccountIndex200Response developer_accounts_index(x_tenant_id)
 
 List all managed accounts
 
@@ -26,7 +26,7 @@ Returns every account owned by the authenticated managed partner, scoped to its 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_index**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_index(customer_id, x_tenant_id)
+> ManagedAccountIndex200Response developer_customers_accounts_index(customer_id, x_tenant_id)
 
 List a customer's managed accounts
 
@@ -122,7 +122,7 @@ Returns the accounts this partner has opened for the given customer. BOLA: a cus
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_store**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_store(customer_id, x_tenant_id, open_managed_account_request)
+> ManagedAccountIndex200Response developer_customers_accounts_store(customer_id, x_tenant_id, open_managed_account_request)
 
 Open a managed account
 
@@ -221,8 +221,8 @@ Opens a real MFB customer_account (NUBAN) for a linked customer, partner-scoped,
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
 from mizancore_baas_generated.models.open_managed_account_request import OpenManagedAccountRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_account_index**
-> VirtualAccountQueryIndex200Response managed_account_index(customer_id, x_tenant_id)
+> ManagedAccountIndex200Response managed_account_index(customer_id, x_tenant_id)
 
 List a customer's managed accounts
 
@@ -325,7 +325,7 @@ Returns the accounts this partner has opened for the given customer. BOLA: a cus
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_account_store**
-> VirtualAccountQueryIndex200Response managed_account_store(customer_id, x_tenant_id, idempotency_key, open_managed_account_request)
+> ManagedAccountIndex200Response managed_account_store(customer_id, x_tenant_id, idempotency_key, open_managed_account_request)
 
 Open a managed account
 
@@ -424,8 +424,8 @@ Opens a real MFB customer_account (NUBAN) for a linked customer, partner-scoped,
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
 from mizancore_baas_generated.models.open_managed_account_request import OpenManagedAccountRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedAccountIndex200Response**](ManagedAccountIndex200Response.md)
 
 ### Authorization
 

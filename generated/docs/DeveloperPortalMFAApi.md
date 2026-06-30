@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **developer_auth_mfa_setup**
-> VirtualAccountQueryIndex200Response developer_auth_mfa_setup(x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_auth_mfa_setup(x_tenant_id)
 
 Initiate developer MFA setup
 
@@ -25,7 +25,7 @@ Generates a TOTP secret and otpauth:// URI for QR code scanning. MFA is NOT acti
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_auth_mfa_status**
-> VirtualAccountQueryIndex200Response developer_auth_mfa_status(x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_auth_mfa_status(x_tenant_id)
 
 Get developer MFA status
 
@@ -123,7 +123,7 @@ Returns MFA enrollment status for the authenticated partner user, including whet
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_auth_mfa_verify**
-> VirtualAccountQueryIndex200Response developer_auth_mfa_verify(x_tenant_id, developer_verify_mfa_request)
+> WebhookSubscriptionDestroy204Response developer_auth_mfa_verify(x_tenant_id, developer_verify_mfa_request)
 
 Verify developer MFA code during login
 
@@ -220,7 +220,7 @@ Accepts a TOTP code or backup code to complete MFA verification during login. On
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.developer_verify_mfa_request import DeveloperVerifyMfaRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_auth_mfa_verify_setup**
-> VirtualAccountQueryIndex200Response developer_auth_mfa_verify_setup(x_tenant_id, developer_verify_mfa_request)
+> WebhookSubscriptionDestroy204Response developer_auth_mfa_verify_setup(x_tenant_id, developer_verify_mfa_request)
 
 Verify developer MFA setup
 
@@ -322,7 +322,7 @@ Confirms the user can generate valid TOTP codes, activating MFA. Returns one-tim
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.developer_verify_mfa_request import DeveloperVerifyMfaRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 

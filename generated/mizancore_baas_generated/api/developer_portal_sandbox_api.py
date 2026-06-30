@@ -18,7 +18,8 @@ from typing_extensions import Annotated
 
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_sandbox_status200_response import DeveloperSandboxStatus200Response
+from mizancore_baas_generated.models.developer_sandbox_test_data200_response import DeveloperSandboxTestData200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -54,7 +55,7 @@ class DeveloperPortalSandboxApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperSandboxStatus200Response:
         """Reset sandbox environment
 
         Resets the developer sandbox environment, clearing all test data and restoring default state. This operation is asynchronous.
@@ -92,8 +93,8 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperSandboxStatus200Response",
+            '200': "DeveloperSandboxStatus200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -127,7 +128,7 @@ class DeveloperPortalSandboxApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperSandboxStatus200Response]:
         """Reset sandbox environment
 
         Resets the developer sandbox environment, clearing all test data and restoring default state. This operation is asynchronous.
@@ -165,8 +166,8 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperSandboxStatus200Response",
+            '200': "DeveloperSandboxStatus200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -238,8 +239,8 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "DeveloperSandboxStatus200Response",
+            '200': "DeveloperSandboxStatus200Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -335,7 +336,7 @@ class DeveloperPortalSandboxApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperSandboxStatus200Response:
         """Get sandbox environment status
 
         Returns the current status of the developer sandbox environment, including whether sandbox mode is active and what test data is available.
@@ -373,7 +374,7 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperSandboxStatus200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -405,7 +406,7 @@ class DeveloperPortalSandboxApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperSandboxStatus200Response]:
         """Get sandbox environment status
 
         Returns the current status of the developer sandbox environment, including whether sandbox mode is active and what test data is available.
@@ -443,7 +444,7 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperSandboxStatus200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -513,7 +514,7 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperSandboxStatus200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -607,7 +608,7 @@ class DeveloperPortalSandboxApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperSandboxTestData200Response:
         """Get sandbox test data patterns
 
         Returns available test data patterns for the sandbox environment, including test account numbers, BVN/NIN patterns, and amount ranges.
@@ -645,7 +646,7 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperSandboxTestData200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -677,7 +678,7 @@ class DeveloperPortalSandboxApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperSandboxTestData200Response]:
         """Get sandbox test data patterns
 
         Returns available test data patterns for the sandbox environment, including test account numbers, BVN/NIN patterns, and amount ranges.
@@ -715,7 +716,7 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperSandboxTestData200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -785,7 +786,7 @@ class DeveloperPortalSandboxApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperSandboxTestData200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",

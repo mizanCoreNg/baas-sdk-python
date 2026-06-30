@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **developer_sandbox_reset**
-> VirtualAccountQueryIndex200Response developer_sandbox_reset(x_tenant_id)
+> DeveloperSandboxStatus200Response developer_sandbox_reset(x_tenant_id)
 
 Reset sandbox environment
 
@@ -24,7 +24,7 @@ Resets the developer sandbox environment, clearing all test data and restoring d
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_sandbox_status200_response import DeveloperSandboxStatus200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperSandboxStatus200Response**](DeveloperSandboxStatus200Response.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_sandbox_status**
-> VirtualAccountQueryIndex200Response developer_sandbox_status(x_tenant_id)
+> DeveloperSandboxStatus200Response developer_sandbox_status(x_tenant_id)
 
 Get sandbox environment status
 
@@ -123,7 +123,7 @@ Returns the current status of the developer sandbox environment, including wheth
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_sandbox_status200_response import DeveloperSandboxStatus200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperSandboxStatus200Response**](DeveloperSandboxStatus200Response.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_sandbox_test_data**
-> VirtualAccountQueryIndex200Response developer_sandbox_test_data(x_tenant_id)
+> DeveloperSandboxTestData200Response developer_sandbox_test_data(x_tenant_id)
 
 Get sandbox test data patterns
 
@@ -219,7 +219,7 @@ Returns available test data patterns for the sandbox environment, including test
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_sandbox_test_data200_response import DeveloperSandboxTestData200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperSandboxTestData200Response**](DeveloperSandboxTestData200Response.md)
 
 ### Authorization
 

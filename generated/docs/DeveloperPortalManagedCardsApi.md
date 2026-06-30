@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 
 # **developer_customers_accounts_cards_freeze**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_freeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_freeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
 
 Freeze a managed card
 
@@ -39,7 +39,7 @@ Freezes (suspends) one of the partner's managed cards — reversible via unfreez
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_index**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_index(customer_id, account_id, x_tenant_id)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_index(customer_id, account_id, x_tenant_id)
 
 List managed cards for an account
 
@@ -147,7 +147,7 @@ Lists every card bound to one of the partner's sponsored accounts, newest first.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_issue**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_issue(customer_id, account_id, x_tenant_id, idempotency_key, issue_managed_card_request)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_issue(customer_id, account_id, x_tenant_id, idempotency_key, issue_managed_card_request)
 
 Issue a managed virtual card
 
@@ -249,7 +249,7 @@ Issues a VIRTUAL debit card for one of the partner's sponsored accounts, inherit
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.issue_managed_card_request import IssueManagedCardRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_limits**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_limits(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_limits_request)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_limits(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_limits_request)
 
 Set managed card spending limits
 
@@ -357,8 +357,8 @@ Sets per-card spending limits (daily ATM/POS/web + per-transaction, all in kobo)
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.models.set_managed_card_limits_request import SetManagedCardLimitsRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_pin**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_pin(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_pin_request)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_pin(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_pin_request)
 
 Set or change a managed card PIN
 
@@ -467,8 +467,8 @@ Sets or changes a managed card's PIN via the processor's secure PIN path. The ra
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.models.set_managed_card_pin_request import SetManagedCardPinRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -537,7 +537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_show**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_show(customer_id, account_id, card_id, x_tenant_id)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_show(customer_id, account_id, card_id, x_tenant_id)
 
 Show a managed card
 
@@ -578,7 +578,7 @@ Returns one of the partner's managed cards — status, masked PAN + last4, expir
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_terminate**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_terminate(customer_id, account_id, card_id, x_tenant_id, idempotency_key, terminate_managed_card_request)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_terminate(customer_id, account_id, card_id, x_tenant_id, idempotency_key, terminate_managed_card_request)
 
 Terminate a managed card
 
@@ -681,8 +681,8 @@ Permanently terminates a managed card — IRREVERSIBLE (the card can never trans
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.models.terminate_managed_card_request import TerminateManagedCardRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -778,7 +778,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_transactions**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_transactions(customer_id, account_id, card_id, x_tenant_id, per_page=per_page, page=page)
+> ManagedCardReadTransactions200Response developer_customers_accounts_cards_transactions(customer_id, account_id, card_id, x_tenant_id, per_page=per_page, page=page)
 
 List managed card transactions
 
@@ -792,7 +792,7 @@ Returns a paginated transaction history for one of the partner's managed cards, 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_transactions200_response import ManagedCardReadTransactions200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -861,7 +861,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadTransactions200Response**](ManagedCardReadTransactions200Response.md)
 
 ### Authorization
 
@@ -885,7 +885,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_accounts_cards_unfreeze**
-> VirtualAccountQueryIndex200Response developer_customers_accounts_cards_unfreeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
+> ManagedCardReadIndex200Response developer_customers_accounts_cards_unfreeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
 
 Unfreeze a managed card
 
@@ -899,7 +899,7 @@ Unfreezes (resumes) a previously-frozen managed card → active. A terminated ca
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -966,7 +966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -993,7 +993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_issue**
-> VirtualAccountQueryIndex200Response managed_card_issue(customer_id, account_id, x_tenant_id, idempotency_key, issue_managed_card_request)
+> ManagedCardReadIndex200Response managed_card_issue(customer_id, account_id, x_tenant_id, idempotency_key, issue_managed_card_request)
 
 Issue a managed virtual card
 
@@ -1008,7 +1008,7 @@ Issues a VIRTUAL debit card for one of the partner's sponsored accounts, inherit
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.issue_managed_card_request import IssueManagedCardRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1075,7 +1075,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1102,7 +1102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_lifecycle_freeze**
-> VirtualAccountQueryIndex200Response managed_card_lifecycle_freeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
+> ManagedCardReadIndex200Response managed_card_lifecycle_freeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
 
 Freeze a managed card
 
@@ -1116,7 +1116,7 @@ Freezes (suspends) one of the partner's managed cards — reversible via unfreez
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1183,7 +1183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1210,7 +1210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_lifecycle_set_limits**
-> VirtualAccountQueryIndex200Response managed_card_lifecycle_set_limits(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_limits_request)
+> ManagedCardReadIndex200Response managed_card_lifecycle_set_limits(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_limits_request)
 
 Set managed card spending limits
 
@@ -1224,8 +1224,8 @@ Sets per-card spending limits (daily ATM/POS/web + per-transaction, all in kobo)
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.models.set_managed_card_limits_request import SetManagedCardLimitsRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1294,7 +1294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_lifecycle_set_pin**
-> VirtualAccountQueryIndex200Response managed_card_lifecycle_set_pin(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_pin_request)
+> ManagedCardReadIndex200Response managed_card_lifecycle_set_pin(customer_id, account_id, card_id, x_tenant_id, idempotency_key, set_managed_card_pin_request)
 
 Set or change a managed card PIN
 
@@ -1334,8 +1334,8 @@ Sets or changes a managed card's PIN via the processor's secure PIN path. The ra
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.models.set_managed_card_pin_request import SetManagedCardPinRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1404,7 +1404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1431,7 +1431,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_lifecycle_terminate**
-> VirtualAccountQueryIndex200Response managed_card_lifecycle_terminate(customer_id, account_id, card_id, x_tenant_id, idempotency_key, terminate_managed_card_request)
+> ManagedCardReadIndex200Response managed_card_lifecycle_terminate(customer_id, account_id, card_id, x_tenant_id, idempotency_key, terminate_managed_card_request)
 
 Terminate a managed card
 
@@ -1445,8 +1445,8 @@ Permanently terminates a managed card — IRREVERSIBLE (the card can never trans
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.models.terminate_managed_card_request import TerminateManagedCardRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1515,7 +1515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1542,7 +1542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_lifecycle_unfreeze**
-> VirtualAccountQueryIndex200Response managed_card_lifecycle_unfreeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
+> ManagedCardReadIndex200Response managed_card_lifecycle_unfreeze(customer_id, account_id, card_id, x_tenant_id, idempotency_key)
 
 Unfreeze a managed card
 
@@ -1556,7 +1556,7 @@ Unfreezes (resumes) a previously-frozen managed card → active. A terminated ca
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1623,7 +1623,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1650,7 +1650,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_read_index**
-> VirtualAccountQueryIndex200Response managed_card_read_index(customer_id, account_id, x_tenant_id)
+> ManagedCardReadIndex200Response managed_card_read_index(customer_id, account_id, x_tenant_id)
 
 List managed cards for an account
 
@@ -1664,7 +1664,7 @@ Lists every card bound to one of the partner's sponsored accounts, newest first.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1727,7 +1727,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1751,7 +1751,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_read_show**
-> VirtualAccountQueryIndex200Response managed_card_read_show(customer_id, account_id, card_id, x_tenant_id)
+> ManagedCardReadIndex200Response managed_card_read_show(customer_id, account_id, card_id, x_tenant_id)
 
 Show a managed card
 
@@ -1765,7 +1765,7 @@ Returns one of the partner's managed cards — status, masked PAN + last4, expir
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_index200_response import ManagedCardReadIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1830,7 +1830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadIndex200Response**](ManagedCardReadIndex200Response.md)
 
 ### Authorization
 
@@ -1854,7 +1854,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_card_read_transactions**
-> VirtualAccountQueryIndex200Response managed_card_read_transactions(customer_id, account_id, card_id, x_tenant_id, per_page=per_page, page=page)
+> ManagedCardReadTransactions200Response managed_card_read_transactions(customer_id, account_id, card_id, x_tenant_id, per_page=per_page, page=page)
 
 List managed card transactions
 
@@ -1868,7 +1868,7 @@ Returns a paginated transaction history for one of the partner's managed cards, 
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_card_read_transactions200_response import ManagedCardReadTransactions200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1937,7 +1937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCardReadTransactions200Response**](ManagedCardReadTransactions200Response.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **developer_auth_login**
-> VirtualAccountQueryIndex200Response developer_auth_login(x_tenant_id, developer_login_request)
+> WebhookSubscriptionDestroy204Response developer_auth_login(x_tenant_id, developer_login_request)
 
 Developer login
 
@@ -22,7 +22,7 @@ Authenticates a partner user with email and password, returning a Bearer token. 
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.developer_login_request import DeveloperLoginRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_auth_logout**
-> VirtualAccountQueryIndex200Response developer_auth_logout(x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_auth_logout(x_tenant_id)
 
 Developer logout
 
@@ -100,7 +100,7 @@ Revokes all API tokens for the authenticated partner user, ending the session.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_auth_me**
-> VirtualAccountQueryIndex200Response developer_auth_me(x_tenant_id)
+> DeveloperAuthMe200Response developer_auth_me(x_tenant_id)
 
 Get current developer profile
 
@@ -198,7 +198,7 @@ Returns the profile of the currently authenticated partner user.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_auth_me200_response import DeveloperAuthMe200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperAuthMe200Response**](DeveloperAuthMe200Response.md)
 
 ### Authorization
 

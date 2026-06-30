@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **baas_withdrawal_index**
-> VirtualAccountQueryIndex200Response baas_withdrawal_index(x_tenant_id)
+> PartnerTransactionIndex200Response baas_withdrawal_index(x_tenant_id)
 
 List withdrawal transactions
 
@@ -27,7 +27,7 @@ Returns a paginated list of the partner withdrawal transactions. Supports filter
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **baas_withdrawal_show**
-> VirtualAccountQueryIndex200Response baas_withdrawal_show(id, x_tenant_id)
+> PartnerTransactionIndex200Response baas_withdrawal_show(id, x_tenant_id)
 
 Get withdrawal details
 
@@ -123,7 +123,7 @@ Retrieves the full details of a specific withdrawal transaction by its ID, inclu
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -208,11 +208,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **baas_withdrawal_store**
-> VirtualAccountQueryIndex200Response baas_withdrawal_store(x_tenant_id, idempotency_key, initiate_withdrawal_request)
+> PartnerTransactionIndex200Response baas_withdrawal_store(x_tenant_id, idempotency_key, initiate_withdrawal_request)
 
 Initiate a withdrawal
 
-Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
 ### Example
 
@@ -223,7 +223,7 @@ Submits a withdrawal request to transfer funds from the partner settlement accou
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.initiate_withdrawal_request import InitiateWithdrawalRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -303,16 +303,17 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | Resource created successfully. |  -  |
 **200** | Successful operation. |  -  |
-**422** | Validation error or insufficient balance |  -  |
+**422** | Validation error, insufficient balance, or source_account supplied in pooled mode |  -  |
 **401** | Invalid or missing API key |  -  |
 **403** | Partner account is not active |  -  |
 **400** | Bad Request — tenant routing information missing or invalid (e.g. neither Host header nor X-Tenant-ID resolved to a tenant), or X-Tenant-ID supplied in production where it is disallowed. |  -  |
 **409** | Idempotency-Key conflict — same key replayed with a different payload, or another request is concurrently processing this key. |  -  |
+**404** | source_account VA not found for this partner |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_withdrawals_index**
-> VirtualAccountQueryIndex200Response developer_withdrawals_index(x_tenant_id)
+> PartnerTransactionIndex200Response developer_withdrawals_index(x_tenant_id)
 
 List withdrawal transactions
 
@@ -326,7 +327,7 @@ Returns a paginated list of the partner withdrawal transactions. Supports filter
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -385,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -408,7 +409,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_withdrawals_show**
-> VirtualAccountQueryIndex200Response developer_withdrawals_show(id, x_tenant_id)
+> PartnerTransactionIndex200Response developer_withdrawals_show(id, x_tenant_id)
 
 Get withdrawal details
 
@@ -422,7 +423,7 @@ Retrieves the full details of a specific withdrawal transaction by its ID, inclu
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -483,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -507,11 +508,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_withdrawals_store**
-> VirtualAccountQueryIndex200Response developer_withdrawals_store(x_tenant_id, idempotency_key, initiate_withdrawal_request)
+> PartnerTransactionIndex200Response developer_withdrawals_store(x_tenant_id, idempotency_key, initiate_withdrawal_request)
 
 Initiate a withdrawal
 
-Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
 ### Example
 
@@ -522,7 +523,7 @@ Submits a withdrawal request to transfer funds from the partner settlement accou
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.initiate_withdrawal_request import InitiateWithdrawalRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -561,7 +562,7 @@ with mizancore_baas_generated.ApiClient(configuration) as api_client:
     api_instance = mizancore_baas_generated.BaaSWithdrawalsApi(api_client)
     x_tenant_id = 'world.test.localhost' # str | Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts.
     idempotency_key = 'idempotency_key_example' # str | Unique client-generated key (UUID recommended) for idempotent retry semantics. Duplicate requests return the cached response with header Idempotency-Replayed: true.
-    initiate_withdrawal_request = {"amount":150050,"destination_account":"example","destination_bank":"example","narration":"example"} # InitiateWithdrawalRequest | 
+    initiate_withdrawal_request = {"amount":150050,"destination_account":"example","destination_bank":"example","narration":"example","source_account":"example"} # InitiateWithdrawalRequest | 
 
     try:
         # Initiate a withdrawal
@@ -585,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -602,11 +603,12 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | Resource created successfully. |  -  |
 **200** | Successful operation. |  -  |
-**422** | Validation error or insufficient balance |  -  |
+**422** | Validation error, insufficient balance, or source_account supplied in pooled mode |  -  |
 **401** | Invalid or missing API key |  -  |
 **403** | Partner account is not active |  -  |
 **400** | Bad Request — tenant routing information missing or invalid (e.g. neither Host header nor X-Tenant-ID resolved to a tenant), or X-Tenant-ID supplied in production where it is disallowed. |  -  |
 **409** | Idempotency-Key conflict — same key replayed with a different payload, or another request is concurrently processing this key. |  -  |
+**404** | source_account VA not found for this partner |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

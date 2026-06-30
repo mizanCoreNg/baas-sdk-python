@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **developer_customers_index**
-> VirtualAccountQueryIndex200Response developer_customers_index(x_tenant_id, per_page=per_page)
+> ManagedCustomerIndex200Response developer_customers_index(x_tenant_id, per_page=per_page)
 
 List managed customers
 
@@ -33,7 +33,7 @@ Returns the managed customers linked to the authenticated partner. BVN/NIN/phone
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_offboard**
-> VirtualAccountQueryIndex200Response developer_customers_offboard(customer_id, x_tenant_id, managed_customer_lifecycle_request)
+> ManagedCustomerIndex200Response developer_customers_offboard(customer_id, x_tenant_id, managed_customer_lifecycle_request)
 
 Offboard a managed customer
 
@@ -131,8 +131,8 @@ Severs the partner relationship with a managed customer (active|suspended → of
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_reactivate**
-> VirtualAccountQueryIndex200Response developer_customers_reactivate(customer_id, x_tenant_id, managed_customer_lifecycle_request)
+> ManagedCustomerIndex200Response developer_customers_reactivate(customer_id, x_tenant_id, managed_customer_lifecycle_request)
 
 Reactivate a managed customer
 
@@ -235,8 +235,8 @@ Restores a suspended partner relationship (suspended → active). Only a suspend
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_show**
-> VirtualAccountQueryIndex200Response developer_customers_show(id, x_tenant_id)
+> ManagedCustomerIndex200Response developer_customers_show(id, x_tenant_id)
 
 Show a managed customer
 
@@ -339,7 +339,7 @@ Returns a single managed customer linked to the authenticated partner. BOLA: a c
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_store**
-> VirtualAccountQueryIndex200Response developer_customers_store(x_tenant_id, onboard_managed_customer_request)
+> ManagedCustomerIndex200Response developer_customers_store(x_tenant_id, onboard_managed_customer_request)
 
 Onboard a managed customer
 
@@ -438,8 +438,8 @@ Onboards an MFB-owned end-customer under the partner (find-or-link by BVN — an
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.onboard_managed_customer_request import OnboardManagedCustomerRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_customers_suspend**
-> VirtualAccountQueryIndex200Response developer_customers_suspend(customer_id, x_tenant_id, managed_customer_lifecycle_request)
+> ManagedCustomerIndex200Response developer_customers_suspend(customer_id, x_tenant_id, managed_customer_lifecycle_request)
 
 Suspend a managed customer
 
@@ -539,8 +539,8 @@ Freezes the partner relationship with a managed customer (active → suspended).
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -629,7 +629,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_index**
-> VirtualAccountQueryIndex200Response managed_customer_index(x_tenant_id, per_page=per_page)
+> ManagedCustomerIndex200Response managed_customer_index(x_tenant_id, per_page=per_page)
 
 List managed customers
 
@@ -643,7 +643,7 @@ Returns the managed customers linked to the authenticated partner. BVN/NIN/phone
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -704,7 +704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -727,7 +727,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_lifecycle_offboard**
-> VirtualAccountQueryIndex200Response managed_customer_lifecycle_offboard(customer_id, x_tenant_id, idempotency_key, managed_customer_lifecycle_request)
+> ManagedCustomerIndex200Response managed_customer_lifecycle_offboard(customer_id, x_tenant_id, idempotency_key, managed_customer_lifecycle_request)
 
 Offboard a managed customer
 
@@ -741,8 +741,8 @@ Severs the partner relationship with a managed customer (active|suspended → of
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -807,7 +807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -834,7 +834,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_lifecycle_reactivate**
-> VirtualAccountQueryIndex200Response managed_customer_lifecycle_reactivate(customer_id, x_tenant_id, idempotency_key, managed_customer_lifecycle_request)
+> ManagedCustomerIndex200Response managed_customer_lifecycle_reactivate(customer_id, x_tenant_id, idempotency_key, managed_customer_lifecycle_request)
 
 Reactivate a managed customer
 
@@ -848,8 +848,8 @@ Restores a suspended partner relationship (suspended → active). Only a suspend
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -914,7 +914,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_lifecycle_suspend**
-> VirtualAccountQueryIndex200Response managed_customer_lifecycle_suspend(customer_id, x_tenant_id, idempotency_key, managed_customer_lifecycle_request)
+> ManagedCustomerIndex200Response managed_customer_lifecycle_suspend(customer_id, x_tenant_id, idempotency_key, managed_customer_lifecycle_request)
 
 Suspend a managed customer
 
@@ -955,8 +955,8 @@ Freezes the partner relationship with a managed customer (active → suspended).
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1021,7 +1021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -1048,7 +1048,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_show**
-> VirtualAccountQueryIndex200Response managed_customer_show(id, x_tenant_id)
+> ManagedCustomerIndex200Response managed_customer_show(id, x_tenant_id)
 
 Show a managed customer
 
@@ -1062,7 +1062,7 @@ Returns a single managed customer linked to the authenticated partner. BOLA: a c
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1123,7 +1123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 
@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_store**
-> VirtualAccountQueryIndex200Response managed_customer_store(x_tenant_id, idempotency_key, onboard_managed_customer_request)
+> ManagedCustomerIndex200Response managed_customer_store(x_tenant_id, idempotency_key, onboard_managed_customer_request)
 
 Onboard a managed customer
 
@@ -1161,8 +1161,8 @@ Onboards an MFB-owned end-customer under the partner (find-or-link by BVN — an
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.onboard_managed_customer_request import OnboardManagedCustomerRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1225,7 +1225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerIndex200Response**](ManagedCustomerIndex200Response.md)
 
 ### Authorization
 

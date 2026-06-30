@@ -19,9 +19,9 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.models.record_consent_request import RecordConsentRequest
 from mizancore_baas_generated.models.revoke_consent_request import RevokeConsentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -61,7 +61,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Export consent register
 
         Paginated consent-activity feed suitable for the MFB's CBN monthly-returns evidence.
@@ -111,7 +111,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -147,7 +147,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Export consent register
 
         Paginated consent-activity feed suitable for the MFB's CBN monthly-returns evidence.
@@ -197,7 +197,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -283,7 +283,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -400,7 +400,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """List consent register
 
         Returns the authenticated partner's consent attestations, optionally filtered by customer_reference, consent_type, or status.
@@ -447,7 +447,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -482,7 +482,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """List consent register
 
         Returns the authenticated partner's consent attestations, optionally filtered by customer_reference, consent_type, or status.
@@ -529,7 +529,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -611,7 +611,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -721,7 +721,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Record a consent attestation
 
         Attests a consent obtained from the partner's end-customer. Owner/admin/developer only. Recording the same type for the same customer_reference supersedes the prior granted one.
@@ -762,8 +762,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -797,7 +797,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Record a consent attestation
 
         Attests a consent obtained from the partner's end-customer. Owner/admin/developer only. Recording the same type for the same customer_reference supersedes the prior granted one.
@@ -838,8 +838,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -914,8 +914,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1028,7 +1028,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Revoke a consent
 
         Revokes a granted consent attestation. Owner/admin/developer only. Revoking a non-granted record returns 422.
@@ -1072,8 +1072,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1109,7 +1109,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Revoke a consent
 
         Revokes a granted consent attestation. Owner/admin/developer only. Revoking a non-granted record returns 422.
@@ -1153,8 +1153,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1234,8 +1234,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1351,7 +1351,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Show a consent record
 
         Returns a single consent attestation scoped to the authenticated partner.
@@ -1392,7 +1392,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1426,7 +1426,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Show a consent record
 
         Returns a single consent attestation scoped to the authenticated partner.
@@ -1467,7 +1467,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1542,7 +1542,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1644,7 +1644,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Export consent register
 
         Paginated consent-activity feed suitable for the MFB's CBN monthly-returns evidence.
@@ -1694,7 +1694,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1730,7 +1730,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Export consent register
 
         Paginated consent-activity feed suitable for the MFB's CBN monthly-returns evidence.
@@ -1780,7 +1780,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1866,7 +1866,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1983,7 +1983,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """List consent register
 
         Returns the authenticated partner's consent attestations, optionally filtered by customer_reference, consent_type, or status.
@@ -2030,7 +2030,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2065,7 +2065,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """List consent register
 
         Returns the authenticated partner's consent attestations, optionally filtered by customer_reference, consent_type, or status.
@@ -2112,7 +2112,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2194,7 +2194,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2305,7 +2305,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Record a consent attestation
 
         Attests a consent obtained from the partner's end-customer. Owner/admin/developer only. Recording the same type for the same customer_reference supersedes the prior granted one.
@@ -2349,8 +2349,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2386,7 +2386,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Record a consent attestation
 
         Attests a consent obtained from the partner's end-customer. Owner/admin/developer only. Recording the same type for the same customer_reference supersedes the prior granted one.
@@ -2430,8 +2430,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2511,8 +2511,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2630,7 +2630,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Revoke a consent
 
         Revokes a granted consent attestation. Owner/admin/developer only. Revoking a non-granted record returns 422.
@@ -2677,8 +2677,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2716,7 +2716,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Revoke a consent
 
         Revokes a granted consent attestation. Owner/admin/developer only. Revoking a non-granted record returns 422.
@@ -2763,8 +2763,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2849,8 +2849,8 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerConsentIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2970,7 +2970,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerConsentIndex200Response:
         """Show a consent record
 
         Returns a single consent attestation scoped to the authenticated partner.
@@ -3011,7 +3011,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3045,7 +3045,7 @@ class DeveloperPortalConsentsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerConsentIndex200Response]:
         """Show a consent record
 
         Returns a single consent attestation scoped to the authenticated partner.
@@ -3086,7 +3086,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3161,7 +3161,7 @@ class DeveloperPortalConsentsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerConsentIndex200Response",
             '401': None,
             '403': None,
             '404': None,

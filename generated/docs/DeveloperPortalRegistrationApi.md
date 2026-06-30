@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **developer_registration_register**
-> VirtualAccountQueryIndex200Response developer_registration_register(x_tenant_id, register_developer_request)
+> DeveloperRegistrationRegister201Response developer_registration_register(x_tenant_id, register_developer_request)
 
 Register as a developer partner
 
@@ -20,8 +20,8 @@ Self-service registration for developers wanting to integrate with the BaaS plat
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.developer_registration_register201_response import DeveloperRegistrationRegister201Response
 from mizancore_baas_generated.models.register_developer_request import RegisterDeveloperRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperRegistrationRegister201Response**](DeveloperRegistrationRegister201Response.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_registration_verify_email**
-> VirtualAccountQueryIndex200Response developer_registration_verify_email(x_tenant_id, verify_developer_email_request)
+> DeveloperRegistrationRegister201Response developer_registration_verify_email(x_tenant_id, verify_developer_email_request)
 
 Verify developer email address
 
@@ -98,8 +98,8 @@ Verifies the developer email address using the token sent during registration.
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.developer_registration_register201_response import DeveloperRegistrationRegister201Response
 from mizancore_baas_generated.models.verify_developer_email_request import VerifyDeveloperEmailRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperRegistrationRegister201Response**](DeveloperRegistrationRegister201Response.md)
 
 ### Authorization
 

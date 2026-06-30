@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **developer_kyb_business**
-> VirtualAccountQueryIndex200Response developer_kyb_business(x_tenant_id, update_kyb_business_request)
+> DeveloperKybShow200Response developer_kyb_business(x_tenant_id, update_kyb_business_request)
 
 Update KYB business info
 
@@ -28,8 +28,8 @@ Sets registration type, RC number, legal name, tax id and registered address. Ow
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.developer_kyb_show200_response import DeveloperKybShow200Response
 from mizancore_baas_generated.models.update_kyb_business_request import UpdateKybBusinessRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperKybShow200Response**](DeveloperKybShow200Response.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_kyb_documents_upload**
-> VirtualAccountQueryIndex200Response developer_kyb_documents_upload(x_tenant_id, upload_kyb_document_request)
+> WebhookSubscriptionDestroy204Response developer_kyb_documents_upload(x_tenant_id, upload_kyb_document_request)
 
 Upload a KYB document
 
@@ -129,7 +129,7 @@ Multipart upload of a supporting document. Stored via the document storage abstr
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.upload_kyb_document_request import UploadKybDocumentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_kyb_officers_add**
-> VirtualAccountQueryIndex200Response developer_kyb_officers_add(x_tenant_id, add_kyb_officer_request)
+> DeveloperKybOfficersAdd201Response developer_kyb_officers_add(x_tenant_id, add_kyb_officer_request)
 
 Add a KYB officer
 
@@ -230,7 +230,7 @@ Attaches a director or beneficial owner. Owner/admin only. BVN is stored hidden 
 ```python
 import mizancore_baas_generated
 from mizancore_baas_generated.models.add_kyb_officer_request import AddKybOfficerRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_kyb_officers_add201_response import DeveloperKybOfficersAdd201Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperKybOfficersAdd201Response**](DeveloperKybOfficersAdd201Response.md)
 
 ### Authorization
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_kyb_officers_remove**
-> VirtualAccountQueryIndex200Response developer_kyb_officers_remove(id, x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_kyb_officers_remove(id, x_tenant_id)
 
 Remove a KYB officer
 
@@ -330,7 +330,7 @@ Removes a director/owner. Owner/admin only. BOLA-scoped.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_kyb_officers_update**
-> VirtualAccountQueryIndex200Response developer_kyb_officers_update(id, x_tenant_id, update_kyb_officer_request)
+> DeveloperKybOfficersAdd201Response developer_kyb_officers_update(id, x_tenant_id, update_kyb_officer_request)
 
 Update a KYB officer
 
@@ -431,8 +431,8 @@ Updates a director/owner. Owner/admin only. BOLA: a cross-partner officer id res
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.developer_kyb_officers_add201_response import DeveloperKybOfficersAdd201Response
 from mizancore_baas_generated.models.update_kyb_officer_request import UpdateKybOfficerRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperKybOfficersAdd201Response**](DeveloperKybOfficersAdd201Response.md)
 
 ### Authorization
 
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_kyb_show**
-> VirtualAccountQueryIndex200Response developer_kyb_show(x_tenant_id)
+> DeveloperKybShow200Response developer_kyb_show(x_tenant_id)
 
 Get KYB submission
 
@@ -534,7 +534,7 @@ Returns the authenticated partner KYB submission with officers and documents, cr
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_kyb_show200_response import DeveloperKybShow200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperKybShow200Response**](DeveloperKybShow200Response.md)
 
 ### Authorization
 
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_kyb_submit**
-> VirtualAccountQueryIndex200Response developer_kyb_submit(x_tenant_id)
+> DeveloperKybShow200Response developer_kyb_submit(x_tenant_id)
 
 Submit KYB for review
 
@@ -630,7 +630,7 @@ Validates completeness and submits the KYB. Owner/admin only. Returns 422 if inc
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_kyb_show200_response import DeveloperKybShow200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperKybShow200Response**](DeveloperKybShow200Response.md)
 
 ### Authorization
 

@@ -18,7 +18,8 @@ from typing_extensions import Annotated
 
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_statements_index200_response import DeveloperStatementsIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -54,7 +55,7 @@ class DeveloperPortalSettlementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Download settlement statement (CSV)
 
         Streams the authenticated partner's settlement statement as a CSV attachment (text/csv) for the given date range. Same data + BOLA scoping as the JSON endpoint; streamed (not built in memory) so large ranges are safe.
@@ -92,7 +93,7 @@ class DeveloperPortalSettlementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -125,7 +126,7 @@ class DeveloperPortalSettlementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Download settlement statement (CSV)
 
         Streams the authenticated partner's settlement statement as a CSV attachment (text/csv) for the given date range. Same data + BOLA scoping as the JSON endpoint; streamed (not built in memory) so large ranges are safe.
@@ -163,7 +164,7 @@ class DeveloperPortalSettlementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -234,7 +235,7 @@ class DeveloperPortalSettlementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -329,7 +330,7 @@ class DeveloperPortalSettlementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> DeveloperStatementsIndex200Response:
         """Get settlement statement
 
         Returns the authenticated partner's settlement statement (opening balance, movements with running balance, per-day summaries, closing balance) for a date range. Optionally narrowed to a single virtual account. Money values are in kobo.
@@ -367,7 +368,7 @@ class DeveloperPortalSettlementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperStatementsIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -400,7 +401,7 @@ class DeveloperPortalSettlementsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[DeveloperStatementsIndex200Response]:
         """Get settlement statement
 
         Returns the authenticated partner's settlement statement (opening balance, movements with running balance, per-day summaries, closing balance) for a date range. Optionally narrowed to a single virtual account. Money values are in kobo.
@@ -438,7 +439,7 @@ class DeveloperPortalSettlementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperStatementsIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -509,7 +510,7 @@ class DeveloperPortalSettlementsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "DeveloperStatementsIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",

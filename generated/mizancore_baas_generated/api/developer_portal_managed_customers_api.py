@@ -19,9 +19,9 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
+from mizancore_baas_generated.models.managed_customer_index200_response import ManagedCustomerIndex200Response
 from mizancore_baas_generated.models.managed_customer_lifecycle_request import ManagedCustomerLifecycleRequest
 from mizancore_baas_generated.models.onboard_managed_customer_request import OnboardManagedCustomerRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -58,7 +58,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """List managed customers
 
         Returns the managed customers linked to the authenticated partner. BVN/NIN/phone are masked (PII). Empty for a licensed partner (no links).
@@ -99,7 +99,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -132,7 +132,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """List managed customers
 
         Returns the managed customers linked to the authenticated partner. BVN/NIN/phone are masked (PII). Empty for a licensed partner (no links).
@@ -173,7 +173,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -247,7 +247,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -348,7 +348,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Offboard a managed customer
 
         Severs the partner relationship with a managed customer (active|suspended → offboarded, terminal). Revokes the partner active consents (NDPA lawful-basis withdrawal) and ends all access. The shared customer identity is NOT deleted (other partners + MFB bank-of-record). Managed partners only. Owner/admin/developer only.
@@ -392,8 +392,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -429,7 +429,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Offboard a managed customer
 
         Severs the partner relationship with a managed customer (active|suspended → offboarded, terminal). Revokes the partner active consents (NDPA lawful-basis withdrawal) and ends all access. The shared customer identity is NOT deleted (other partners + MFB bank-of-record). Managed partners only. Owner/admin/developer only.
@@ -473,8 +473,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -554,8 +554,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -672,7 +672,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Reactivate a managed customer
 
         Restores a suspended partner relationship (suspended → active). Only a suspended relationship may be reactivated; offboarded is terminal. Managed partners only. Owner/admin/developer only.
@@ -716,8 +716,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -753,7 +753,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Reactivate a managed customer
 
         Restores a suspended partner relationship (suspended → active). Only a suspended relationship may be reactivated; offboarded is terminal. Managed partners only. Owner/admin/developer only.
@@ -797,8 +797,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -878,8 +878,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -995,7 +995,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Show a managed customer
 
         Returns a single managed customer linked to the authenticated partner. BOLA: a customer this partner has no link to resolves to 404, never 200. ACTIVE link: a managed partner additionally needs a granted, unexpired ACCOUNT_DETAILS consent for the PII block (403 BAAS_CONSENT_REQUIRED otherwise). NON-ACTIVE link (suspended/offboarded): the partner-owned relationship metadata is always readable (200, status reflects the lifecycle state) but the customer PII block is masked (customer:null, pii_access:false) — NDPA data-minimisation — so the partner can still view and reactivate the relationship.
@@ -1036,7 +1036,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1070,7 +1070,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Show a managed customer
 
         Returns a single managed customer linked to the authenticated partner. BOLA: a customer this partner has no link to resolves to 404, never 200. ACTIVE link: a managed partner additionally needs a granted, unexpired ACCOUNT_DETAILS consent for the PII block (403 BAAS_CONSENT_REQUIRED otherwise). NON-ACTIVE link (suspended/offboarded): the partner-owned relationship metadata is always readable (200, status reflects the lifecycle state) but the customer PII block is masked (customer:null, pii_access:false) — NDPA data-minimisation — so the partner can still view and reactivate the relationship.
@@ -1111,7 +1111,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1186,7 +1186,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1285,7 +1285,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Onboard a managed customer
 
         Onboards an MFB-owned end-customer under the partner (find-or-link by BVN — an existing identity is reused with no re-KYC). Managed partners only. Owner/admin/developer only. Idempotent per (partner, BVN).
@@ -1326,8 +1326,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1361,7 +1361,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Onboard a managed customer
 
         Onboards an MFB-owned end-customer under the partner (find-or-link by BVN — an existing identity is reused with no re-KYC). Managed partners only. Owner/admin/developer only. Idempotent per (partner, BVN).
@@ -1402,8 +1402,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1478,8 +1478,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1592,7 +1592,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Suspend a managed customer
 
         Freezes the partner relationship with a managed customer (active → suspended). The partner can no longer act on the customer (subsequent access 404s) until reactivated. Managed partners only. Owner/admin/developer only.
@@ -1636,8 +1636,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1673,7 +1673,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Suspend a managed customer
 
         Freezes the partner relationship with a managed customer (active → suspended). The partner can no longer act on the customer (subsequent access 404s) until reactivated. Managed partners only. Owner/admin/developer only.
@@ -1717,8 +1717,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1798,8 +1798,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1915,7 +1915,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """List managed customers
 
         Returns the managed customers linked to the authenticated partner. BVN/NIN/phone are masked (PII). Empty for a licensed partner (no links).
@@ -1956,7 +1956,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1989,7 +1989,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """List managed customers
 
         Returns the managed customers linked to the authenticated partner. BVN/NIN/phone are masked (PII). Empty for a licensed partner (no links).
@@ -2030,7 +2030,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2104,7 +2104,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -2206,7 +2206,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Offboard a managed customer
 
         Severs the partner relationship with a managed customer (active|suspended → offboarded, terminal). Revokes the partner active consents (NDPA lawful-basis withdrawal) and ends all access. The shared customer identity is NOT deleted (other partners + MFB bank-of-record). Managed partners only. Owner/admin/developer only.
@@ -2253,8 +2253,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2292,7 +2292,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Offboard a managed customer
 
         Severs the partner relationship with a managed customer (active|suspended → offboarded, terminal). Revokes the partner active consents (NDPA lawful-basis withdrawal) and ends all access. The shared customer identity is NOT deleted (other partners + MFB bank-of-record). Managed partners only. Owner/admin/developer only.
@@ -2339,8 +2339,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2425,8 +2425,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2548,7 +2548,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Reactivate a managed customer
 
         Restores a suspended partner relationship (suspended → active). Only a suspended relationship may be reactivated; offboarded is terminal. Managed partners only. Owner/admin/developer only.
@@ -2595,8 +2595,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2634,7 +2634,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Reactivate a managed customer
 
         Restores a suspended partner relationship (suspended → active). Only a suspended relationship may be reactivated; offboarded is terminal. Managed partners only. Owner/admin/developer only.
@@ -2681,8 +2681,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2767,8 +2767,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2890,7 +2890,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Suspend a managed customer
 
         Freezes the partner relationship with a managed customer (active → suspended). The partner can no longer act on the customer (subsequent access 404s) until reactivated. Managed partners only. Owner/admin/developer only.
@@ -2937,8 +2937,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -2976,7 +2976,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Suspend a managed customer
 
         Freezes the partner relationship with a managed customer (active → suspended). The partner can no longer act on the customer (subsequent access 404s) until reactivated. Managed partners only. Owner/admin/developer only.
@@ -3023,8 +3023,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3109,8 +3109,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3230,7 +3230,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Show a managed customer
 
         Returns a single managed customer linked to the authenticated partner. BOLA: a customer this partner has no link to resolves to 404, never 200. ACTIVE link: a managed partner additionally needs a granted, unexpired ACCOUNT_DETAILS consent for the PII block (403 BAAS_CONSENT_REQUIRED otherwise). NON-ACTIVE link (suspended/offboarded): the partner-owned relationship metadata is always readable (200, status reflects the lifecycle state) but the customer PII block is masked (customer:null, pii_access:false) — NDPA data-minimisation — so the partner can still view and reactivate the relationship.
@@ -3271,7 +3271,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3305,7 +3305,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Show a managed customer
 
         Returns a single managed customer linked to the authenticated partner. BOLA: a customer this partner has no link to resolves to 404, never 200. ACTIVE link: a managed partner additionally needs a granted, unexpired ACCOUNT_DETAILS consent for the PII block (403 BAAS_CONSENT_REQUIRED otherwise). NON-ACTIVE link (suspended/offboarded): the partner-owned relationship metadata is always readable (200, status reflects the lifecycle state) but the customer PII block is masked (customer:null, pii_access:false) — NDPA data-minimisation — so the partner can still view and reactivate the relationship.
@@ -3346,7 +3346,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3421,7 +3421,7 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -3521,7 +3521,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedCustomerIndex200Response:
         """Onboard a managed customer
 
         Onboards an MFB-owned end-customer under the partner (find-or-link by BVN — an existing identity is reused with no re-KYC). Managed partners only. Owner/admin/developer only. Idempotent per (partner, BVN).
@@ -3565,8 +3565,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3602,7 +3602,7 @@ class DeveloperPortalManagedCustomersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedCustomerIndex200Response]:
         """Onboard a managed customer
 
         Onboards an MFB-owned end-customer under the partner (find-or-link by BVN — an existing identity is reused with no re-KYC). Managed partners only. Owner/admin/developer only. Idempotent per (partner, BVN).
@@ -3646,8 +3646,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -3727,8 +3727,8 @@ class DeveloperPortalManagedCustomersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedCustomerIndex200Response",
+            '200': "ManagedCustomerIndex200Response",
             '422': None,
             '401': None,
             '403': None,

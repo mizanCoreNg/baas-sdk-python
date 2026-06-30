@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **developer_statements_download**
-> VirtualAccountQueryIndex200Response developer_statements_download(x_tenant_id)
+> WebhookSubscriptionDestroy204Response developer_statements_download(x_tenant_id)
 
 Download settlement statement (CSV)
 
@@ -23,7 +23,7 @@ Streams the authenticated partner's settlement statement as a CSV attachment (te
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**WebhookSubscriptionDestroy204Response**](WebhookSubscriptionDestroy204Response.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_statements_index**
-> VirtualAccountQueryIndex200Response developer_statements_index(x_tenant_id)
+> DeveloperStatementsIndex200Response developer_statements_index(x_tenant_id)
 
 Get settlement statement
 
@@ -120,7 +120,7 @@ Returns the authenticated partner's settlement statement (opening balance, movem
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.developer_statements_index200_response import DeveloperStatementsIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**DeveloperStatementsIndex200Response**](DeveloperStatementsIndex200Response.md)
 
 ### Authorization
 

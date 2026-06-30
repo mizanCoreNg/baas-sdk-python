@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, field_validator
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.developer_verify_mfa_request import DeveloperVerifyMfaRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.webhook_subscription_destroy204_response import WebhookSubscriptionDestroy204Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -55,7 +55,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Initiate developer MFA setup
 
         Generates a TOTP secret and otpauth:// URI for QR code scanning. MFA is NOT active until verifySetup confirms the user can generate valid codes.
@@ -93,8 +93,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -127,7 +127,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Initiate developer MFA setup
 
         Generates a TOTP secret and otpauth:// URI for QR code scanning. MFA is NOT active until verifySetup confirms the user can generate valid codes.
@@ -165,8 +165,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -237,8 +237,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': "ValidationError",
             '401': None,
             '403': None,
@@ -333,7 +333,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Get developer MFA status
 
         Returns MFA enrollment status for the authenticated partner user, including whether MFA is enabled, verification date, and remaining backup codes.
@@ -371,7 +371,7 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -403,7 +403,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Get developer MFA status
 
         Returns MFA enrollment status for the authenticated partner user, including whether MFA is enabled, verification date, and remaining backup codes.
@@ -441,7 +441,7 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -511,7 +511,7 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -606,7 +606,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Verify developer MFA code during login
 
         Accepts a TOTP code or backup code to complete MFA verification during login. On success, deletes the partial token and issues a full-access token. Rate-limited to prevent brute force.
@@ -647,8 +647,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -683,7 +683,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Verify developer MFA code during login
 
         Accepts a TOTP code or backup code to complete MFA verification during login. On success, deletes the partial token and issues a full-access token. Rate-limited to prevent brute force.
@@ -724,8 +724,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -801,8 +801,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -915,7 +915,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> WebhookSubscriptionDestroy204Response:
         """Verify developer MFA setup
 
         Confirms the user can generate valid TOTP codes, activating MFA. Returns one-time backup codes that must be saved securely.
@@ -956,8 +956,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -991,7 +991,7 @@ class DeveloperPortalMFAApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[WebhookSubscriptionDestroy204Response]:
         """Verify developer MFA setup
 
         Confirms the user can generate valid TOTP codes, activating MFA. Returns one-time backup codes that must be saved securely.
@@ -1032,8 +1032,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1108,8 +1108,8 @@ class DeveloperPortalMFAApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "WebhookSubscriptionDestroy204Response",
+            '200': "WebhookSubscriptionDestroy204Response",
             '422': None,
             '401': None,
             '403': None,

@@ -510,7 +510,7 @@ conf = mizancore_baas_generated.Configuration(
             auth['apiKeyAuth'] = {
                 'type': 'api_key',
                 'in': 'header',
-                'key': 'X-Partner-Key',
+                'key': 'X-API-Key',
                 'value': self.get_api_key_with_prefix(
                     'apiKeyAuth',
                 ),

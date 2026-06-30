@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
 from mizancore_baas_generated.models.initiate_withdrawal_request import InitiateWithdrawalRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -55,7 +55,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """List withdrawal transactions
 
         Returns a paginated list of the partner withdrawal transactions. Supports filtering by status, date range, and reference.
@@ -93,7 +93,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -125,7 +125,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """List withdrawal transactions
 
         Returns a paginated list of the partner withdrawal transactions. Supports filtering by status, date range, and reference.
@@ -163,7 +163,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -233,7 +233,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -328,7 +328,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """Get withdrawal details
 
         Retrieves the full details of a specific withdrawal transaction by its ID, including current status and fee breakdown.
@@ -369,7 +369,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -403,7 +403,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """Get withdrawal details
 
         Retrieves the full details of a specific withdrawal transaction by its ID, including current status and fee breakdown.
@@ -444,7 +444,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -519,7 +519,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -619,10 +619,10 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """Initiate a withdrawal
 
-        Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+        Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -663,13 +663,14 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerTransactionIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
             '400': "ErrorResponse",
             '409': "ErrorResponse",
+            '404': None,
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -700,10 +701,10 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """Initiate a withdrawal
 
-        Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+        Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -744,13 +745,14 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerTransactionIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
             '400': "ErrorResponse",
             '409': "ErrorResponse",
+            '404': None,
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -784,7 +786,7 @@ class BaaSWithdrawalsApi:
     ) -> RESTResponseType:
         """Initiate a withdrawal
 
-        Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+        Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -825,13 +827,14 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerTransactionIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
             '400': "ErrorResponse",
             '409': "ErrorResponse",
+            '404': None,
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -941,7 +944,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """List withdrawal transactions
 
         Returns a paginated list of the partner withdrawal transactions. Supports filtering by status, date range, and reference.
@@ -979,7 +982,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1011,7 +1014,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """List withdrawal transactions
 
         Returns a paginated list of the partner withdrawal transactions. Supports filtering by status, date range, and reference.
@@ -1049,7 +1052,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1119,7 +1122,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -1214,7 +1217,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """Get withdrawal details
 
         Retrieves the full details of a specific withdrawal transaction by its ID, including current status and fee breakdown.
@@ -1255,7 +1258,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1289,7 +1292,7 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """Get withdrawal details
 
         Retrieves the full details of a specific withdrawal transaction by its ID, including current status and fee breakdown.
@@ -1330,7 +1333,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1405,7 +1408,7 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1505,10 +1508,10 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> PartnerTransactionIndex200Response:
         """Initiate a withdrawal
 
-        Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+        Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -1549,13 +1552,14 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerTransactionIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
             '400': "ErrorResponse",
             '409': "ErrorResponse",
+            '404': None,
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1586,10 +1590,10 @@ class BaaSWithdrawalsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[PartnerTransactionIndex200Response]:
         """Initiate a withdrawal
 
-        Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+        Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -1630,13 +1634,14 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerTransactionIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
             '400': "ErrorResponse",
             '409': "ErrorResponse",
+            '404': None,
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1670,7 +1675,7 @@ class BaaSWithdrawalsApi:
     ) -> RESTResponseType:
         """Initiate a withdrawal
 
-        Submits a withdrawal request to transfer funds from the partner settlement account to an external bank account via NIP. The amount must be in kobo.
+        Submits a withdrawal request to transfer funds to an external bank account via NIP. The amount must be in kobo. By default the partner settlement pool is debited; va_held-mode partners may pass source_account (a VA NUBAN they own) to debit that specific virtual account instead.
 
         :param x_tenant_id: Tenant identifier (UUID or domain, e.g. world.test.localhost). Required on every tenant-scoped route. Maps to the tenant whose database serves this request. In production, prefer Host-header-based resolution; X-Tenant-ID is intended for non-production environments and is rejected (HTTP 400) on production hosts. (required)
         :type x_tenant_id: str
@@ -1711,13 +1716,14 @@ class BaaSWithdrawalsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "PartnerTransactionIndex200Response",
+            '200': "PartnerTransactionIndex200Response",
             '422': None,
             '401': None,
             '403': None,
             '400': "ErrorResponse",
             '409': "ErrorResponse",
+            '404': None,
         }
         response_data = self.api_client.call_api(
             *_param,

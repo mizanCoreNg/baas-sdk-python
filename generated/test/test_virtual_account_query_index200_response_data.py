@@ -35,6 +35,37 @@ class TestVirtualAccountQueryIndex200ResponseData(unittest.TestCase):
         model = VirtualAccountQueryIndex200ResponseData()
         if include_optional:
             return VirtualAccountQueryIndex200ResponseData(
+                id = '',
+                account_number = '',
+                account_name = 56,
+                bank_code = '',
+                bank_name = '',
+                status = '',
+                type = '',
+                max_uses = '',
+                use_count = 56,
+                expires_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                amount_validation = '',
+                amount = '',
+                bvn = '',
+                nin = '',
+                verified_name = '',
+                verification_source = '',
+                is_verified = True,
+                company_name = '',
+                rc_number = '',
+                incorporation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                director_bvn = '',
+                director_name = '',
+                customer_reference = '',
+                customer_data = '',
+                metadata = mizancore_baas_generated.models.metadata.metadata(),
+                has_individual_balance = True,
+                balance = 56,
+                available_balance = 56,
+                ledger_account_id = '',
+                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )
         else:
             return VirtualAccountQueryIndex200ResponseData(

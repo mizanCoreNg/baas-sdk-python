@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **developer_consents_export**
-> VirtualAccountQueryIndex200Response developer_consents_export(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status, per_page=per_page)
+> PartnerConsentIndex200Response developer_consents_export(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status, per_page=per_page)
 
 Export consent register
 
@@ -31,7 +31,7 @@ Paginated consent-activity feed suitable for the MFB's CBN monthly-returns evide
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_consents_index**
-> VirtualAccountQueryIndex200Response developer_consents_index(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status)
+> PartnerConsentIndex200Response developer_consents_index(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status)
 
 List consent register
 
@@ -135,7 +135,7 @@ Returns the authenticated partner's consent attestations, optionally filtered by
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_consents_record**
-> VirtualAccountQueryIndex200Response developer_consents_record(x_tenant_id, record_consent_request)
+> PartnerConsentIndex200Response developer_consents_record(x_tenant_id, record_consent_request)
 
 Record a consent attestation
 
@@ -237,8 +237,8 @@ Attests a consent obtained from the partner's end-customer. Owner/admin/develope
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.models.record_consent_request import RecordConsentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_consents_revoke**
-> VirtualAccountQueryIndex200Response developer_consents_revoke(id, x_tenant_id, revoke_consent_request)
+> PartnerConsentIndex200Response developer_consents_revoke(id, x_tenant_id, revoke_consent_request)
 
 Revoke a consent
 
@@ -338,8 +338,8 @@ Revokes a granted consent attestation. Owner/admin/developer only. Revoking a no
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.models.revoke_consent_request import RevokeConsentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_consents_show**
-> VirtualAccountQueryIndex200Response developer_consents_show(id, x_tenant_id)
+> PartnerConsentIndex200Response developer_consents_show(id, x_tenant_id)
 
 Show a consent record
 
@@ -442,7 +442,7 @@ Returns a single consent attestation scoped to the authenticated partner.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_consent_export**
-> VirtualAccountQueryIndex200Response partner_consent_export(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status, per_page=per_page)
+> PartnerConsentIndex200Response partner_consent_export(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status, per_page=per_page)
 
 Export consent register
 
@@ -541,7 +541,7 @@ Paginated consent-activity feed suitable for the MFB's CBN monthly-returns evide
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_consent_index**
-> VirtualAccountQueryIndex200Response partner_consent_index(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status)
+> PartnerConsentIndex200Response partner_consent_index(x_tenant_id, customer_reference=customer_reference, consent_type=consent_type, status=status)
 
 List consent register
 
@@ -645,7 +645,7 @@ Returns the authenticated partner's consent attestations, optionally filtered by
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -710,7 +710,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_consent_record**
-> VirtualAccountQueryIndex200Response partner_consent_record(x_tenant_id, idempotency_key, record_consent_request)
+> PartnerConsentIndex200Response partner_consent_record(x_tenant_id, idempotency_key, record_consent_request)
 
 Record a consent attestation
 
@@ -747,8 +747,8 @@ Attests a consent obtained from the partner's end-customer. Owner/admin/develope
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.models.record_consent_request import RecordConsentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -811,7 +811,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -837,7 +837,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_consent_revoke**
-> VirtualAccountQueryIndex200Response partner_consent_revoke(id, x_tenant_id, idempotency_key, revoke_consent_request)
+> PartnerConsentIndex200Response partner_consent_revoke(id, x_tenant_id, idempotency_key, revoke_consent_request)
 
 Revoke a consent
 
@@ -851,8 +851,8 @@ Revokes a granted consent attestation. Owner/admin/developer only. Revoking a no
 
 ```python
 import mizancore_baas_generated
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.models.revoke_consent_request import RevokeConsentRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -917,7 +917,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 
@@ -944,7 +944,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_consent_show**
-> VirtualAccountQueryIndex200Response partner_consent_show(id, x_tenant_id)
+> PartnerConsentIndex200Response partner_consent_show(id, x_tenant_id)
 
 Show a consent record
 
@@ -958,7 +958,7 @@ Returns a single consent attestation scoped to the authenticated partner.
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_consent_index200_response import PartnerConsentIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -1019,7 +1019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerConsentIndex200Response**](PartnerConsentIndex200Response.md)
 
 ### Authorization
 

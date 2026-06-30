@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **developer_wallet_balance**
-> VirtualAccountQueryIndex200Response developer_wallet_balance(x_tenant_id)
+> PartnerWalletBalance200Response developer_wallet_balance(x_tenant_id)
 
 Get wallet balance
 
@@ -25,7 +25,7 @@ Returns the current prepaid wallet balance for the authenticated partner, includ
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_wallet_balance200_response import PartnerWalletBalance200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerWalletBalance200Response**](PartnerWalletBalance200Response.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_wallet_transactions**
-> VirtualAccountQueryIndex200Response developer_wallet_transactions(x_tenant_id)
+> PartnerTransactionIndex200Response developer_wallet_transactions(x_tenant_id)
 
 List wallet transactions
 
@@ -121,7 +121,7 @@ Returns a paginated list of wallet transactions (debits and credits) for the aut
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_wallet_balance**
-> VirtualAccountQueryIndex200Response partner_wallet_balance(x_tenant_id)
+> PartnerWalletBalance200Response partner_wallet_balance(x_tenant_id)
 
 Get wallet balance
 
@@ -217,7 +217,7 @@ Returns the current prepaid wallet balance for the authenticated partner, includ
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_wallet_balance200_response import PartnerWalletBalance200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerWalletBalance200Response**](PartnerWalletBalance200Response.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_wallet_transactions**
-> VirtualAccountQueryIndex200Response partner_wallet_transactions(x_tenant_id)
+> PartnerTransactionIndex200Response partner_wallet_transactions(x_tenant_id)
 
 List wallet transactions
 
@@ -313,7 +313,7 @@ Returns a paginated list of wallet transactions (debits and credits) for the aut
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 

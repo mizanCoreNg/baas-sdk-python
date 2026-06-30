@@ -18,8 +18,8 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr, field_validator
 from typing_extensions import Annotated
+from mizancore_baas_generated.models.managed_account_index200_response import ManagedAccountIndex200Response
 from mizancore_baas_generated.models.open_managed_account_request import OpenManagedAccountRequest
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
 
 from mizancore_baas_generated.api_client import ApiClient, RequestSerialized
 from mizancore_baas_generated.api_response import ApiResponse
@@ -55,7 +55,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedAccountIndex200Response:
         """List all managed accounts
 
         Returns every account owned by the authenticated managed partner, scoped to its own baas_partner_id. Empty for a licensed partner (no managed accounts).
@@ -93,7 +93,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -125,7 +125,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedAccountIndex200Response]:
         """List all managed accounts
 
         Returns every account owned by the authenticated managed partner, scoped to its own baas_partner_id. Empty for a licensed partner (no managed accounts).
@@ -163,7 +163,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -233,7 +233,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '400': "ErrorResponse",
@@ -328,7 +328,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedAccountIndex200Response:
         """List a customer's managed accounts
 
         Returns the accounts this partner has opened for the given customer. BOLA: a customer this partner has no link to resolves to 404, never 200.
@@ -369,7 +369,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -403,7 +403,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedAccountIndex200Response]:
         """List a customer's managed accounts
 
         Returns the accounts this partner has opened for the given customer. BOLA: a customer this partner has no link to resolves to 404, never 200.
@@ -444,7 +444,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -519,7 +519,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -619,7 +619,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedAccountIndex200Response:
         """Open a managed account
 
         Opens a real MFB customer_account (NUBAN) for a linked customer, partner-scoped, opened empty (funded by inbound credit). Managed partners only. Owner/admin/developer only.
@@ -663,8 +663,8 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedAccountIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -700,7 +700,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedAccountIndex200Response]:
         """Open a managed account
 
         Opens a real MFB customer_account (NUBAN) for a linked customer, partner-scoped, opened empty (funded by inbound credit). Managed partners only. Owner/admin/developer only.
@@ -744,8 +744,8 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedAccountIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -825,8 +825,8 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedAccountIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -942,7 +942,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedAccountIndex200Response:
         """List a customer's managed accounts
 
         Returns the accounts this partner has opened for the given customer. BOLA: a customer this partner has no link to resolves to 404, never 200.
@@ -983,7 +983,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1017,7 +1017,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedAccountIndex200Response]:
         """List a customer's managed accounts
 
         Returns the accounts this partner has opened for the given customer. BOLA: a customer this partner has no link to resolves to 404, never 200.
@@ -1058,7 +1058,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1133,7 +1133,7 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "VirtualAccountQueryIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '401': None,
             '403': None,
             '404': None,
@@ -1234,7 +1234,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> VirtualAccountQueryIndex200Response:
+    ) -> ManagedAccountIndex200Response:
         """Open a managed account
 
         Opens a real MFB customer_account (NUBAN) for a linked customer, partner-scoped, opened empty (funded by inbound credit). Managed partners only. Owner/admin/developer only.
@@ -1281,8 +1281,8 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedAccountIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1320,7 +1320,7 @@ class DeveloperPortalManagedAccountsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[VirtualAccountQueryIndex200Response]:
+    ) -> ApiResponse[ManagedAccountIndex200Response]:
         """Open a managed account
 
         Opens a real MFB customer_account (NUBAN) for a linked customer, partner-scoped, opened empty (funded by inbound credit). Managed partners only. Owner/admin/developer only.
@@ -1367,8 +1367,8 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedAccountIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '422': None,
             '401': None,
             '403': None,
@@ -1453,8 +1453,8 @@ class DeveloperPortalManagedAccountsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "VirtualAccountQueryIndex200Response",
-            '200': "VirtualAccountQueryIndex200Response",
+            '201': "ManagedAccountIndex200Response",
+            '200': "ManagedAccountIndex200Response",
             '422': None,
             '401': None,
             '403': None,

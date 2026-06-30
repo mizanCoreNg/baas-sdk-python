@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **developer_transactions_index**
-> VirtualAccountQueryIndex200Response developer_transactions_index(x_tenant_id)
+> PartnerTransactionIndex200Response developer_transactions_index(x_tenant_id)
 
 List partner transactions
 
@@ -25,7 +25,7 @@ Returns a paginated list of all transactions for the authenticated partner. Supp
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **developer_transactions_show**
-> VirtualAccountQueryIndex200Response developer_transactions_show(id, x_tenant_id)
+> PartnerTransactionIndex200Response developer_transactions_show(id, x_tenant_id)
 
 Get transaction details
 
@@ -121,7 +121,7 @@ Retrieves the full details of a specific transaction by its ID. Only transaction
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_transaction_index**
-> VirtualAccountQueryIndex200Response partner_transaction_index(x_tenant_id)
+> PartnerTransactionIndex200Response partner_transaction_index(x_tenant_id)
 
 List partner transactions
 
@@ -220,7 +220,7 @@ Returns a paginated list of all transactions for the authenticated partner. Supp
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partner_transaction_show**
-> VirtualAccountQueryIndex200Response partner_transaction_show(id, x_tenant_id)
+> PartnerTransactionIndex200Response partner_transaction_show(id, x_tenant_id)
 
 Get transaction details
 
@@ -316,7 +316,7 @@ Retrieves the full details of a specific transaction by its ID. Only transaction
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.partner_transaction_index200_response import PartnerTransactionIndex200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -377,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**PartnerTransactionIndex200Response**](PartnerTransactionIndex200Response.md)
 
 ### Authorization
 

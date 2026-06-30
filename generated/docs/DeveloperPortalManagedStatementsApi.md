@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **developer_accounts_statement**
-> VirtualAccountQueryIndex200Response developer_accounts_statement(account_id, x_tenant_id)
+> ManagedCustomerStatementShow200Response developer_accounts_statement(account_id, x_tenant_id)
 
 Get a managed customer account statement
 
@@ -23,7 +23,7 @@ Returns a date-ranged statement (opening/closing balance, per-transaction moveme
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_statement_show200_response import ManagedCustomerStatementShow200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerStatementShow200Response**](ManagedCustomerStatementShow200Response.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **managed_customer_statement_show**
-> VirtualAccountQueryIndex200Response managed_customer_statement_show(account_id, x_tenant_id)
+> ManagedCustomerStatementShow200Response managed_customer_statement_show(account_id, x_tenant_id)
 
 Get a managed customer account statement
 
@@ -123,7 +123,7 @@ Returns a date-ranged statement (opening/closing balance, per-transaction moveme
 
 ```python
 import mizancore_baas_generated
-from mizancore_baas_generated.models.virtual_account_query_index200_response import VirtualAccountQueryIndex200Response
+from mizancore_baas_generated.models.managed_customer_statement_show200_response import ManagedCustomerStatementShow200Response
 from mizancore_baas_generated.rest import ApiException
 from pprint import pprint
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAccountQueryIndex200Response**](VirtualAccountQueryIndex200Response.md)
+[**ManagedCustomerStatementShow200Response**](ManagedCustomerStatementShow200Response.md)
 
 ### Authorization
 
